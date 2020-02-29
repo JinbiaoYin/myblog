@@ -11,8 +11,7 @@ module.exports = {
     },
     base:'/myblog/',
     themeConfig: {//主题配置
-        repo: 'https://gitee.com/shuaibiao/myblog',
-        repoLabel: 'gitee',
+        repo: 'JinbiaoYin/myblog',
         editLinks: true,
         lastUpdated: '上次更新', // string | boolean
         displayAllHeaders: true,//展开所有侧边栏，默认为false
@@ -84,11 +83,13 @@ module.exports = {
             //后端部分笔记
             '/backend/': [
               '',      /* /backend/ */
-            ],      
+            ],    
+            '/about': [
+                '',        /* / */
+            ],
             // fallback
             '/': [
               '',        /* / */
-              'about'    /* /about.html */
             ]
         }
       }

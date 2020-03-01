@@ -9,7 +9,6 @@ module.exports = {
             lang: 'zh-CN',
         }
     },
-    base:'/myblog/',
     themeConfig: {//主题配置
         repo: 'JinbiaoYin/myblog',
         docsDir: 'docs',

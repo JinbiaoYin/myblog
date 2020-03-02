@@ -2,7 +2,8 @@ module.exports = {
     title: "小二温不胜",
     description: '温不胜的blog',
     head: [//favicon配置
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }]   
     ],
     locales: {//多语言配置
         '/': {
@@ -16,6 +17,15 @@ module.exports = {
         editLinkText: '编辑！',
         lastUpdated: '上次更新', // string | boolean
         displayAllHeaders: true,//展开所有侧边栏，默认为false
+        plugins: {
+           '@vuepress/pwa': {
+              serviceWorker: true,
+              updatePopup: {
+                message: "发现新内容可用",
+                buttonText: "刷新"
+              }
+            }
+        },
         nav: [
             {
                 text: '在线文档',
@@ -41,8 +51,8 @@ module.exports = {
                             { text: '代码格式化', link: 'https://tool.oschina.net/codeformat/html' },
                             { text: '公式编辑器', link: 'https://zh.numberempire.com/latexequationeditor.php' },
                             { text: '二维码生成器', link: 'https://cli.im/' },
-                            { text: '在线编码转换', link: 'http://tool.chinaz.com/tools/native_ascii.aspx' },    
-                            { text: 'PDF转换器', link: 'https://smallpdf.com/cn/pdf-to-word' }
+                            { text: '在线编码转换', link: 'http://tool.chinaz.com/tools/native_ascii.aspx' },
+                            { text: 'Properties <=> YAML', link: 'https://www.toyaml.com/index.html' }                            
                         ] 
                     },
                     {

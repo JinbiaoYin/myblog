@@ -13,10 +13,11 @@ export default {
                 window.AV = require('leancloud-storage');
             }
             const Valine = require('valine');
+            const secretKey = require('../../../config/secretKey.js')
             new Valine({
                 el: '#vcomments',
-                appId: 'UwLx06GMin2cFiqrqvQvHKVs-gzGzoHsz',
-                appKey: '6jUwEKRzTBjT5m0o7QSHDWr8',
+                appId: secretKey.appId,
+                appKey: secretKey.appKey,
                 notify:false,
                 verify:false,
                 avatar:'retro',

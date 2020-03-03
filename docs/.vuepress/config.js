@@ -15,7 +15,6 @@ module.exports = {
         editLinkText: '编辑！',
         lastUpdated: '上次更新', // string | boolean
         displayAllHeaders: true,//展开所有侧边栏，默认为false
-        nav: nav,
-        sidebar: 'auto'
+        nav: nav
       }
 }

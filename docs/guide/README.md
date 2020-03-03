@@ -2,7 +2,7 @@
 
 ## 前言
 
-该文档是由 VuePress 搭建的，感谢up主 飞跃高山与大洋的鱼 ，他的视频地址为 [bilibili](https://www.bilibili.com/video/av43316513/)。
+该文档是由 VuePress 搭建的，跟据视频地址 [bilibili](https://www.bilibili.com/video/av43316513/) 学习搭建。
 
 在跟up学习搭建时，总是想着把它当成一个博客分享知识给恰巧看到这些笔记的人，所以搞起来不伦不类的，其实一开始就忘记了自己的初心——记录自己，因此后来又去除了以下功能：
 

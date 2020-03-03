@@ -17,7 +17,7 @@ module.exports = {
   '@vuepress/last-updated' : {//最后更新时间插件
     transformer: (timestamp, lang) => {
       moment.locale('zh-CN')
-      return moment(timestamp).format('YYYY-MM-DD hh:mm:ss')
+      return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
     }
   },
   '@vuepress/medium-zoom': {

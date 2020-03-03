@@ -19,6 +19,14 @@ module.exports = {
       //return moment(timestamp).fromNow()
       return moment(timestamp).format('YYYY-MM-DD h:mm:ss')
     }
+  },
+  '@vuepress/medium-zoom': {
+    selector: '.content__default img',
+    // medium-zoom options here
+    // See: https://github.com/francoischalifour/medium-zoom#options
+    options: {
+      margin: 16
+    }
   }
 
 }

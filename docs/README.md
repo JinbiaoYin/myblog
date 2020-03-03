@@ -3,7 +3,7 @@ home: true
 heroImage: /avatar.png
 heroText: 温不胜
 tagline: 温故而知新，可以为师矣。
-actionText: 开始回顾
+actionText: 查看笔记
 actionLink: /guide/
 features:
 - title: 标题1

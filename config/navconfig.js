@@ -1,4 +1,6 @@
 module.exports = [
+    { text: 'Home', link: '/' },
+    { text: 'Guide', link: '/guide/' },
     {
         text: '在线文档',
         ariaLabel: 'Language Menu',

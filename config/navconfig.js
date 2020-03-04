@@ -9,6 +9,7 @@ module.exports = [
     { 
         text: '后端', items: [
             { text: 'Java', link: '/backend/java/' },
+            { text: 'MySQL', link: '/backend/mysql/' },
         ]
     },
     { 

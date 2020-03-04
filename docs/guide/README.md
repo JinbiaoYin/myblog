@@ -20,10 +20,28 @@
 笔记暂时分为几个大类为：
 
 - 前端
+    - HTML
+    - CSS
+    - Javascript
+    - Vue
+
 - 后端
+    - JavaSE
+    - Spring
+    - SpringBoot
+    - [MySQL](/backend/mysql/)
+    - Oracle
+    - Nginx
+        
 - 开发工具
+    - IntellJ IDEA
+    - [Git](/tools/git/)
+
 - 操作系统
+    - Linux
+
 - 其它
+    - 教师资格证
 
 
 

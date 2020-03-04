@@ -7,7 +7,7 @@ actionText: 查看笔记
 actionLink: /guide/
 features:
 - title: 关于博客
-  details: 博客使用 VuePress 搭建，使用了pwa,back-to-top,google-analytics,vuepress-plugin-auto-sidebar,last-updated,medium-zoom插件。
+  details: 博客使用 VuePress 搭建，使用了pwa,back-to-top,google-analytics,vuepress-plugin-auto-sidebar,last-updated,medium-zoom插件，使用了Travis ci做持续集成。
 - title: 笔记要求
   details: 笔记一定要精炼，抛去废话，排版整洁，便于二次查看。
 - title: 目的

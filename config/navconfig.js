@@ -21,6 +21,7 @@ module.exports = [
     { 
         text: '开发工具', items: [
             { text: 'Git', link: '/tools/git/' },
+            { text: 'Navicat', link: '/tools/navicat/' },
         ]
     },
     { 

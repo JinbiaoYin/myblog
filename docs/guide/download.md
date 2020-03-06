@@ -22,6 +22,12 @@ title: 下载
 - [Postman](https://www.postman.com/downloads/)
 - ShadowsocksR-dotnet4.0(百度云盘)
 - [Typora](https://www.typora.io/#windows)
+- [uTools](https://www.u.tools/)
+
+::: tip
+`Typora`是个 Markdown 编辑文档。
+`uTools`是个工具集。下载它之后在市场里找到需要的插件安装，例如**程序员手册**。
+:::
 
 ## 关于软件版本号的解释
 

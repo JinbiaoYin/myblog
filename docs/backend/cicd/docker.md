@@ -130,8 +130,13 @@ systemctl restart docker
 docker pull redis
 ```
 ```sh
-docker run -d --name redis -v /opt/docker/data/redis:/data redis 
+docker run -d -p 6379:6379 --name redis -v $PWD/data:/data redis --requirepass "123456" --appendonly yes
 ```
+::: tip
+-d 后台运行
+-p 6379:6379 指定[主机端口]:[容器端口]
+-v [主机路径]:[容器路径] 指定数据映射
+:::
 
 
 ## 参考资料

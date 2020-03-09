@@ -89,7 +89,7 @@ mvn clean package
 **则可以使用<exclusion>标签来排除不需要的依赖。**
 
 ### 版本锁定原则
-使用<dependencyManagement></dependencyManagement>标签来锁定版本,以解决版本冲突问题。
+使用`<dependencyManagement>``</dependencyManagement>`标签来锁定版本,以解决版本冲突问题。
 例如：
 ```xml
 <properties>

@@ -12,7 +12,11 @@ module.exports = [
             { text: '持续集成和持续部署', link: '/backend/cicd/'},
             { text: 'MySQL', link: '/backend/mysql/' },
             { text: 'Oracle', link: '/backend/oracle/' },
-            { text: 'Redis', link: '/backend/redis/' }
+            { text: 'Redis', link: '/backend/redis/' },
+            { text: 'Maven', link: '/backend/maven/' },
+            { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
+            { text: 'Quartz', link: '/backend/quartz/' }
+
         ]
     },
     { 

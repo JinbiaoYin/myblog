@@ -107,7 +107,8 @@ mvn clean package
 ```
 
 ## 常用的远程仓库
-将其加入到你的 pom.xml 中
+如果你使用 Maven 自带默认的 settings.xml 配置，那么你很有可能在下载依赖的时候就卡住，因为我就被搞了半天。
+下面是一些常用的远程仓库，最好将其加入到你的项目 pom.xml 中，而不是 settings.xml 中，这样别人 clone 你的代码时，可以方便的下载依赖。
 ```xml
         <repository>
             <id>sonatype-repos</id>

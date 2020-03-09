@@ -53,6 +53,7 @@ scope：
 - provided
 - runtime
 - test
+
 例如：假如有A,B,C,B依赖A,C依赖B，假如A中存在scope为provide和test的依赖，那么此依赖将不会传递给子模块。
 runtime传递后还是runtime
 

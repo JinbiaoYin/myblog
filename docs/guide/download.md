@@ -9,7 +9,7 @@ title: 下载
 
 我的开发工具和必须要装的软件有很多，包括为
 
-- [Jdk](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 - Eclipse(百度云盘)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) `破解教程见参考资料`
 - [MySQL](https://downloads.mysql.com/archives/community/)

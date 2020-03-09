@@ -18,10 +18,10 @@ Quartz 是一个任务调度框架。比如你遇到这样的问题：
 maven 依赖：
 
 ```xml
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-quartz</artifactId>
+</dependency>
 ```
 
 使用 `@EnableScheduling` 注解在`XXXApplication`来开启计划任务功能

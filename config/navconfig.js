@@ -14,11 +14,10 @@ module.exports = [
             { text: 'Redis', link: '/backend/redis/' },
             { text: 'Quartz', link: '/backend/quartz/' },
             { text: 'MySQL', link: '/backend/mysql/' },
-            { text: '持续集成和持续部署', link: '/backend/cicd/'},
+            { text: 'CICD', link: '/backend/cicd/'},
             { text: 'Oracle', link: '/backend/oracle/' },
             { text: 'Nginx', link: '/backend/nginx/' },
-            { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
-            { text: 'Quartz', link: '/backend/quartz/' },
+            { text: 'RabbitMQ', link: '/backend/rabbitmq/' }
 
         ]
     },

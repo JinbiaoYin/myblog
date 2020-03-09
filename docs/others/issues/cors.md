@@ -3,7 +3,6 @@ title: 如何解决跨域问题
 ---
 
 ## 介绍
-
 在浏览器端进行 Ajax 请求时会出现跨域问题。
 
 跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的**同源策略**造成的，是浏览器对 JavaScript 施加的安全限制。
@@ -25,15 +24,6 @@ CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持
 ### Spring Boot 配置 CORS
 #### 使用 Java 配置的方式
 ```java
-/**
- * 跨域配置
- * <p>Title: CorsConfiguration</p>
- * <p>Description: </p>
- *
- * @author Lusifer
- * @version 1.0.0
- * @date 2018/3/8 22:56
- */
 @Configuration
 public class CORSConfiguration extends WebMvcConfigurerAdapter {
     @Override

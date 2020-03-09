@@ -9,11 +9,13 @@ module.exports = [
     { 
         text: '后端', items: [
             { text: 'Java', link: '/backend/java/' },
-            { text: '持续集成和持续部署', link: '/backend/cicd/'},
-            { text: 'MySQL', link: '/backend/mysql/' },
-            { text: 'Oracle', link: '/backend/oracle/' },
-            { text: 'Redis', link: '/backend/redis/' },
+            { text: 'MyBatis', link: '/backend/mybatis/' },
             { text: 'Maven', link: '/backend/maven/' },
+            { text: 'Redis', link: '/backend/redis/' },
+            { text: 'Quartz', link: '/backend/quartz/' },
+            { text: 'MySQL', link: '/backend/mysql/' },
+            { text: '持续集成和持续部署', link: '/backend/cicd/'},
+            { text: 'Oracle', link: '/backend/oracle/' },
             { text: 'Nginx', link: '/backend/nginx/' },
             { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
             { text: 'Quartz', link: '/backend/quartz/' },

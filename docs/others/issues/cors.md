@@ -1,5 +1,5 @@
 ---
-title :如何解决跨域问题
+title: 如何解决跨域问题
 ---
 
 ## 介绍
@@ -21,6 +21,37 @@ title :如何解决跨域问题
 CORS 是一个 W3C 标准，全称是"跨域资源共享"（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出 XMLHttpRequest 请求，从而克服了 AJAX 只能同源使用的限制。
 
 CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE 浏览器不能低于 IE10。整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与同源的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨源通信（在 header 中设置：Access-Control-Allow-Origin）
+
+### Spring Boot 配置 CORS
+#### 使用 Java 配置的方式
+```java
+/**
+ * 跨域配置
+ * <p>Title: CorsConfiguration</p>
+ * <p>Description: </p>
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/3/8 22:56
+ */
+@Configuration
+public class CORSConfiguration extends WebMvcConfigurerAdapter {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**").allowedOrigins("*")
+                .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowCredentials(false).maxAge(3600);
+    }
+}
+```
+
+#### 使用注解的方式
+```java
+@CrossOrigin(origins = "*", maxAge = 3600)
+```
+- origin="*"代表所有域名都可访问
+- maxAge: maxAge飞行前响应的缓存持续时间的最大年龄，简单来说就是Cookie的有效期 单位为秒。
+
 
 ### 使用 JSONP 解决跨域问题
 JSONP（JSON with Padding）是 JSON 的一种“使用模式”，可用于解决主流浏览器的跨域数据访问的问题。由于同源策略，一般来说位于 server1.example.com 的网页无法与 server2.example.com 的服务器沟通，而 HTML 的 <script> 元素是一个例外。利用 <script> 元素的这个开放策略，网页可以得到从其他来源动态产生的 JSON 资料，而这种使用模式就是所谓的 JSONP。用 JSONP 抓到的资料并不是 JSON，而是任意的 JavaScript，用 JavaScript 直译器执行而不是用 JSON 解析器解析（需要目标服务器配合一个 callback 函数）。

@@ -33,7 +33,7 @@ module.exports = [
     },
     { 
         text: '其它', items: [    
-            { text: 'Python', link: '/others/issues/' },
+            { text: 'Issues', link: '/others/issues/' },
         ]
     },
     { text: '联系我', link: 'http://wpa.qq.com/msgrd?v=3&uin=731509863&site=qq&menu=yes' }

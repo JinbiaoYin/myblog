@@ -62,6 +62,33 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 }
 ```
 
+在 `application.yml` 中配置 `mapper` 所在路径
+
+```yml
+mybatis:
+  type-aliases-package: top.yinjinbiao.video.*.domain
+  mapper-locations: classpath:mapper/*.xml
+```
+
+在 启动类 上加上注解 `@MapperScan` 包扫描路径
+
+```java{8}
+package top.yinjinbiao.video;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
+
+@SpringBootApplication
+@MapperScan(basePackages = "top.yinjinbiao.video.test.mapper")
+class VideoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(VideoApplication.class,args);
+    }
+}
+
+```
+
 ## 使用 PageHelper 分页插件
 
 依赖如下:
@@ -109,7 +136,7 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 
 在 resources 目录下，新建 generator 文件夹，并新建 `generatorConfig.xml`，如下：
 
-```xml
+```xml{16,28,35,40}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
@@ -150,6 +177,8 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 
         <!-- 配置需要指定生成的数据库和表，% 代表所有表 -->
         <table catalog="video" tableName="%">
+            <!-- 默认为 false ,如果设置为 true,在生成的 SQL 中,table 名字不会加上 catalog 或 schema -->
+            <property name="ignoreQualifiersAtRuntime" value="true"/>
             <!-- mysql 配置 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>

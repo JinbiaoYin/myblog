@@ -30,11 +30,11 @@ title: 使用 Swagger2 接口文档
 
 ### 配置 Swagger2
 
-注意：`RequestHandlerSelectors.basePackage("top.yinjinbiao.controller")` 为 Controller 包路径，不然生成的文档扫描不到注解
+注意：`RequestHandlerSelectors.basePackage("XXXXX")` 为 Controller 包路径，需要修改为自己项目的 `Controller` 不然生成的文档扫描不到注解，如下 19 行
 
 创建一个名为 `Swagger2Configuration` 的 Java 配置类，代码如下：
 
-```java
+```java{19}
 package top.yinjinbiao.config;
 
 import org.springframework.context.annotation.Bean;
@@ -354,6 +354,7 @@ public UserModel login(@ApiParam(name = "model", value = "用户信息Model") Us
 - examples 参数示例。仅适用于 BodyParameters
 
 示例：
+
 ```java
 @ResponseBody
 @PostMapping(value="/login")

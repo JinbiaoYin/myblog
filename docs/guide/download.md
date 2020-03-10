@@ -11,6 +11,7 @@ title: 下载
 
 - [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 - Eclipse(百度云盘)
+- [Maven](https://maven.apache.org/download.cgi#)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) `破解教程见参考资料`
 - [MySQL](https://downloads.mysql.com/archives/community/)
 - [Navicat Premium](https://www.navicat.com.cn/download/navicat-premium) `若最新版本无patch破解器，则百度网盘下载旧版本`

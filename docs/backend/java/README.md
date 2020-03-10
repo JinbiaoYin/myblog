@@ -44,7 +44,20 @@ public JsonResult page(BizDonator BizDonator,
 }
 ```
 
-2. XXXXX
+2. **包命名：**如果是公司的项目，以公司的域名反转。
+
+例如腾讯(tencent)，域名反转则为 com.tencent ，后面跟上项目名例如Tim，com.tencent.tim。
+
+如果是自己的项目，则以自己的域名反转(没有则自定义)，例如我的域名为 yinjinbiao.top ， 反转则为 top.yinjinbiao ，如果的项目为 blog ，那么包命就是 top.yinjinbiao.blog。发布线上地址就是 [个人博客](https://blog.yinjinbiao.top) 。
+
+3. **单体应用**的包划分。模块包命以业务划分为主，便于以后服务拆分。
+
+例如 `top.yinjinbiao.video.admin.controller` , `top.yinjinbiao.video.admin.service` , `top.yinjinbiao.video.admin.dao`。
+
+其中 `service` 只能调用自己包下的 `dao`。
+
+`controller` 如果需要调用到其它模块下的 `service`，需要注明注释为跨包调用。 
+
 
 3. XXXXX
 

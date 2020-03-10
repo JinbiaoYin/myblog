@@ -8,7 +8,7 @@ HikariCP 是数据库连接池的后起之秀，号称性能最好，可以完�
 
 ## Springboot 集成 HikariCP
 
-Springboot2 版本锁定了 HikariCP 为 3.2.0 版本，所以只需要在自己的 pom.xml 中配置：
+Springboot2 版本锁定了 HikariCP 为 3.2.0 版本，所以只需要在自己的 `pom.xml` 中配置：
 ```xml
 <dependency>
     <groupId>com.zaxxer</groupId>
@@ -107,7 +107,7 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 </build>
 ```
 
-在 resources 目录下，新建 generator 文件夹，并新建 generatorConfig.xml，如下：
+在 resources 目录下，新建 generator 文件夹，并新建 `generatorConfig.xml`，如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

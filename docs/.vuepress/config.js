@@ -5,7 +5,8 @@ module.exports = {
     description: '温不胜的blog',
     head: [//favicon配置
         ['link', { rel: 'icon', href: '/favicon.ico' }],
-        ['link', { rel: 'manifest', href: '/manifest.json' }]   
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'baidu-site-verification', content: 'UN9xm3yqIg' }]
     ],
     plugins: plugins,
     themeConfig: {//主题配置

@@ -59,6 +59,6 @@ public JsonResult page(BizDonator BizDonator,
 `controller` 如果需要调用到其它模块下的 `service`，需要注明注释为跨包调用。 
 
 
-3. XXXXX
+3. 代码精简度大于代码执行效率。如果代码可封装，但是效率变低，在可接收范围内，需要对代码进行封装以提升代码可读性。
 
 ## 参考资料

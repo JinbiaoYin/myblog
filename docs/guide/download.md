@@ -63,3 +63,4 @@ title: 下载
 ## 参考资料
 1. [IntelliJ IDEA破解教程持续更新](https://www.algerfan.cn/articles/2019/03/06/1551868940012.html)
 2. [MySQL 安装教程](/backend/mysql/install)
+3. [Maven Settings 配置私服](/backend/maven/lastupdated)

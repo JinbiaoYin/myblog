@@ -10,15 +10,16 @@ module.exports = [
         text: '后端', items: [
             { text: 'Java', link: '/backend/java/' },
             { text: 'MyBatis', link: '/backend/mybatis/' },
-            { text: 'Maven', link: '/backend/maven/' },
-            { text: 'Redis', link: '/backend/redis/' },
             { text: 'Quartz', link: '/backend/quartz/' },
-            { text: 'MySQL', link: '/backend/mysql/' },
-            { text: 'CICD', link: '/backend/cicd/'},
-            { text: 'Oracle', link: '/backend/oracle/' },
-            { text: 'Nginx', link: '/backend/nginx/' },
-            { text: 'RabbitMQ', link: '/backend/rabbitmq/' }
-
+            { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
+            { text: 'Spring Security Oauth', link: '/backend/spring-security-oauth/' }
+        ]
+    },
+    { 
+        text: '数据库', items: [    
+            { text: 'MySQL', link: '/database/mysql/'},
+            { text: 'Oracle', link: '/database/oracle/' },
+            { text: 'Redis', link: '/database/redis/' },
         ]
     },
     { 
@@ -30,12 +31,14 @@ module.exports = [
         text: '开发工具', items: [
             { text: 'Git', link: '/tools/git/' },
             { text: 'Navicat', link: '/tools/navicat/' },
+            { text: 'Maven', link: '/tools/maven/' },
+            { text: 'Nginx', link: '/tools/nginx/' },
         ]
     },
     { 
         text: '其它', items: [    
+            { text: 'CICD', link: '/others/cicd/'},
             { text: 'Issues', link: '/others/issues/' },
         ]
-    },
-    { text: '联系我', link: 'http://wpa.qq.com/msgrd?v=3&uin=731509863&site=qq&menu=yes' }
+    }
 ]

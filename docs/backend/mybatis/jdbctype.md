@@ -4,9 +4,8 @@ title: Mybatis 中 jdbcType 的映射关系
 
 ## jdbc Oracle MySQL 对应表
 
-+──────────+────────────────+─────────────────+─────────────────────+
 | Mybatis  | JdbcType       | Oracle          | MySQL               |
-+──────────+────────────────+─────────────────+─────────────────────+
+|----------|----------------|-----------------|---------------------|
 | JdbcType | ARRAY          |                 |                     |
 | JdbcType | BIGINT         |                 | BIGINT              |
 | JdbcType | BINARY         |                 |                     |
@@ -38,4 +37,3 @@ title: Mybatis 中 jdbcType 的映射关系
 | JdbcType | UNDEFINED      |                 |                     |
 | JdbcType | VARBINARY      |                 |                     |
 | JdbcType | VARCHAR        | VARCHAR         | VARCHAR             |
-+──────────+────────────────+─────────────────+─────────────────────+

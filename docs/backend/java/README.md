@@ -2,9 +2,6 @@
 title: 首页
 ---
 
-## 介绍
-本节记录工作中对JavaEE的学习。包含但不限于SpringCloud 微服务,SpringBoot,Nginx,MySQL,Oracle,ES,MQ,工作流等。
-
 ## Java 代码规范
 
 1. Controller 中的方法，对于 `@RequestMapping` 注解来说，一定要加上请求类型 `RequestMethod` ，例如：
@@ -44,7 +41,7 @@ public JsonResult page(BizDonator BizDonator,
 }
 ```
 
-2. **包命名：**如果是公司的项目，以公司的域名反转。
+2. **包命名**如果是公司的项目，以公司的域名反转。
 
 例如腾讯(tencent)，域名反转则为 com.tencent ，后面跟上项目名例如Tim，com.tencent.tim。
 
@@ -116,7 +113,7 @@ B) 领域模型命名规约
 - 不是 varchar 超长字段，更不能是 text 字段。
 - 不是唯一索引的字段
 
-**例如：** ：商品类目名称使用频率高，字段长度短，名称基本一不变，可在相关联的表中冗余存储类目名称，避免关联查询。
+**例如：** 商品类目名称使用频率高，字段长度短，名称基本一不变，可在相关联的表中冗余存储类目名称，避免关联查询。
 
 7. 单表行数超过 500 万行或者单表容量超过 2GB，才推荐进行分库分表。
 

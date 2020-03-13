@@ -7,9 +7,9 @@ title: 客户端授权模式
 客户端必须得到用户的授权（authorization grant），才能获得令牌（access token）。oAuth 2.0 定义了四种授权方式。
 
 - implicit：简化模式，不推荐使用
-- authorization code：授权码模式
-- resource owner password credentials：密码模式
-- client credentials：客户端模式
+- authorization_code：授权码模式
+- password：密码模式
+- client：客户端模式
 
 ## 简化模式
 

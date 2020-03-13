@@ -37,6 +37,11 @@ spring:
       connection-test-query: SELECT 1
 ```
 
+
+## DataSource
+
+当我们在 `application.yml` 中配置 `spring.datasource`,容器启动时，就会装载这些配置，根据默认的方法去启动一个 `DataSource` 数据源。
+
 ## SpringBoot2 集成 tk-MyBatis
 
 依赖如下:

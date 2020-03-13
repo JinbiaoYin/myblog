@@ -357,5 +357,6 @@ http://localhost:8080/oauth/token?client_id=client&client_secret=secret&grant_ty
 }
 ```
 
-## GitHub 
-本片文章所有代码来自于 [GitHub](https://github.com/JinbiaoYin/video)
+## 参考资料
+- [GitHub,Mybatis版本](https://github.com/JinbiaoYin/video)
+- [Gitee,BeetlSQL版本](https://gitee.com/shuaibiao/springboot-springsecurity-oauth2)

@@ -42,29 +42,16 @@ spring:
 
 当我们在 `application.yml` 中配置 `spring.datasource`,容器启动时，就会装载这些配置，根据默认的方法去启动一个 `DataSource` 数据源。
 
-## SpringBoot2 集成 tk-MyBatis
+## SpringBoot2 集成 MyBatis
 
 依赖如下:
 
 ```xml
 <dependency>
-    <groupId>tk.mybatis</groupId>
-    <artifactId>mapper-spring-boot-starter</artifactId>
-    <version>2.1.5</version>
+    <groupId>org.mybatis.spring.boot</groupId>
+    <artifactId>mybatis-spring-boot-starter</artifactId>
+    <version>2.1.2</version>
 </dependency>
-```
-
-新增 MyMapper 接口，直接实现了基本的增删改成，如下：
-
-```java
-package tk.mybatis.mapper;
-
-import tk.mybatis.mapper.common.Mapper;
-import tk.mybatis.mapper.common.MySqlMapper;
-
-public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
-
-}
 ```
 
 在 `application.yml` 中配置 `mapper` 所在路径
@@ -77,21 +64,124 @@ mybatis:
 
 在 启动类 上加上注解 `@MapperScan` 包扫描路径
 
-```java{8}
+```java{10}
 package top.yinjinbiao.video;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tk.mybatis.spring.annotation.MapperScan;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@EnableSwagger2
 @SpringBootApplication
-@MapperScan(basePackages = "top.yinjinbiao.video.test.mapper")
+@MapperScan(basePackages = "top.yinjinbiao.video.admin.mapper")
 class VideoApplication {
     public static void main(String[] args) {
         SpringApplication.run(VideoApplication.class,args);
     }
 }
+```
 
+新建 SysUser.java
+```java
+package top.yinjinbiao.video.admin.domain;
+
+import lombok.Data;
+import top.yinjinbiao.video.common.domain.BaseDomain;
+
+import java.io.Serializable;
+
+/**
+* @author yin.jinbiao
+* @date 2020-03-12
+*/
+@Data
+public class SysUser implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	private Long id;	
+    private String username;
+    private String loginname;
+    private String password;
+    private Date createTime;
+    private Date updateTime;
+    private Long createBy;
+    private Long updateBy;
+    private Boolean delete;
+}
+```
+
+`resources` 目录下新建 `mapper` 文件夹，并新增 `SysUserMapper.xml`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.yinjinbiao.video.admin.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="top.yinjinbiao.video.admin.domain.SysUser">
+        <!--
+          WARNING - @mbg.generated
+        -->
+
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="loginname" jdbcType="VARCHAR" property="loginname" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="create_by" jdbcType="BIGINT" property="createBy" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="update_by" jdbcType="BIGINT" property="updateBy" />
+        <result column="is_delete" jdbcType="TINYINT" property="delete" />
+    </resultMap>
+
+    <select id="listByLoginname" parameterType="String" resultType="SysPermission">
+        SELECT
+            c.*
+        FROM
+            sys_user t,
+            sys_role_user a,
+            sys_role_permission b,
+            sys_permission c,
+            sys_role d
+        WHERE
+            t.id = a.user_id
+        AND a.role_id = b.role_id
+        AND b.permission_id = c.id
+        AND t.loginname = #{loginname}
+        AND t.is_delete = 0
+        AND d.is_delete = 0
+        AND c.is_delete = 0
+    </select>
+
+    <select id="findByLoginname" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+            t.username,t.loginname,t.password
+        FROM
+            sys_user t
+        WHERE
+            t.loginname = #{loginname}
+        AND t.is_delete = 0
+    </select>
+
+</mapper>
+```
+
+对应的接口 `SysUserMapper.java`
+```java
+package top.yinjinbiao.video.admin.mapper;
+
+import org.apache.ibatis.annotations.Param;
+import top.yinjinbiao.video.admin.domain.SysPermission;
+import top.yinjinbiao.video.admin.domain.SysUser;
+
+import java.util.List;
+
+public interface SysUserMapper {
+
+    List<SysPermission> listByLoginname(@Param("loginname") String loginname);
+
+    SysUser findByLoginname(@Param("loginname") String loginname);
+}
 ```
 
 ## 使用 PageHelper 分页插件
@@ -105,100 +195,4 @@ class VideoApplication {
     <version>1.2.13</version>
 </dependency>
 ```
-
-## 使用 mybatis-generate 插件代码生成
-
-插件依赖如下：
-
-```xml
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>1.3.7</version>
-            <configuration>
-                <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
-                <overwrite>true</overwrite>
-                <verbose>true</verbose>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>mysql</groupId>
-                    <artifactId>mysql-connector-java</artifactId>
-                    <version>${mysql.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>tk.mybatis</groupId>
-                    <artifactId>mapper</artifactId>
-                    <version>4.1.5</version>
-                </dependency>
-            </dependencies>
-        </plugin>
-    </plugins>
-</build>
-```
-
-在 resources 目录下，新建 generator 文件夹，并新建 `generatorConfig.xml`，如下：
-
-```xml{16,28,35,40}
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration
-        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
-<generatorConfiguration>
-    <!-- 引入数据库连接配置 -->
-    <properties resource="jdbc.properties"/>
-
-    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-        <property name="beginningDelimiter" value="`"/>
-        <property name="endingDelimiter" value="`"/>
-
-        <!-- 配置 tk.mybatis 插件 -->
-        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="tk.mybatis.mapper.MyMapper"/>
-        </plugin>
-
-        <!-- 配置数据库连接 -->
-        <jdbcConnection
-                driverClass="${jdbc.driverClass}"
-                connectionURL="${jdbc.url}"
-                userId="${jdbc.username}"
-                password="${jdbc.password}">
-        </jdbcConnection>
-
-        <!-- 配置实体类存放路径 -->
-        <javaModelGenerator targetPackage="top.yinjinbiao.video.domain" targetProject="src/main/java"/>
-
-        <!-- 配置 XML 存放路径 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
-
-        <!-- 配置 DAO 存放路径 -->
-        <javaClientGenerator
-                targetPackage="top.yinjinbiao.video.mapper"
-                targetProject="src/main/java"
-                type="XMLMAPPER"/>
-
-        <!-- 配置需要指定生成的数据库和表，% 代表所有表 -->
-        <table catalog="video" tableName="%">
-            <!-- 默认为 false ,如果设置为 true,在生成的 SQL 中,table 名字不会加上 catalog 或 schema -->
-            <property name="ignoreQualifiersAtRuntime" value="true"/>
-            <!-- mysql 配置 -->
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-    </context>
-</generatorConfiguration>
-```
-
-新建 `jdbc.properties`，使 mybatis-generator 插件读取其中数据库连接配置。例如：
-
-```properties
-jdbc.driverClass=com.mysql.cj.jdbc.Driver
-jdbc.url=jdbc:mysql://
-jdbc.username=
-jdbc.password=
-```
-
-在 IDEA 左侧，maven 插件中找到 mybatis-generator ，即可根据自定义的配置生成实体类即 Mapper 等。
 

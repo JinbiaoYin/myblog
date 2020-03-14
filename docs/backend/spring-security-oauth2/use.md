@@ -414,6 +414,53 @@ http://localhost:8080/oauth/token?grant_type=password&username=admin&password=12
 }
 ```
 
+## 使用 redis 存储 token
+
+1. 加入依赖
+
+```xml
+        <!-- redis begin-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- redis end-->
+
+```
+
+2. `application.yml` 加入配置
+```yml
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 100
+```
+
+3. 更改 `AuthorizationServerConfiguration` 中 `tokenstore`
+
+```java
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+        /**
+     * token 的存储方式
+     * @return
+     */
+    @Bean
+    public TokenStore tokenStore(){
+        return new RedisTokenStore(connectionFactory);
+    }
+```
+
 ## 参考资料
 - [GitHub,Mybatis版本](https://github.com/JinbiaoYin/video)
 - [Gitee,BeetlSQL版本](https://gitee.com/shuaibiao/springboot-springsecurity-oauth2)

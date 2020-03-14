@@ -12,7 +12,7 @@ module.exports = [
             { text: 'MyBatis', link: '/backend/mybatis/' },
             { text: 'Quartz', link: '/backend/quartz/' },
             { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
-            { text: 'Spring Security Oauth', link: '/backend/spring-security-oauth/' }
+            { text: 'Spring Security Oauth', link: '/backend/spring-security-oauth2/' }
         ]
     },
     { 

@@ -39,6 +39,7 @@ module.exports = [
         text: '其它', items: [    
             { text: 'CICD', link: '/others/cicd/'},
             { text: 'Issues', link: '/others/issues/' },
+            { text: 'Java编程思想', link: '/others/thinking_in_java/' },
         ]
     }
 ]

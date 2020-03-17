@@ -52,3 +52,27 @@ chmod +x /usr/local/bin/docker-compose
 ```sh
 rm /usr/local/bin/docker-compose
 ```
+
+## 基本模板
+
+```yml
+version: "3"
+services:
+  tomcat:
+    restart: always
+    image: examples/web
+    ports:
+      - "80:80"
+    volumes:
+      - "/data"
+```
+
+::: tip
+- `version`: 当前**docker-compose**的版本
+- `services`: 所有的服务
+- `tomcat` : 第一个服务
+- `restart` : 重启
+- `image` : 镜像
+- `ports` : 端口映射
+- `volumes` : 指定数据卷
+:::

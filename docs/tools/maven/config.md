@@ -1,5 +1,5 @@
 ---
-title: maven 正常无法下载依赖
+title: maven 配置镜像和私服
 ---
 
 ## 问题

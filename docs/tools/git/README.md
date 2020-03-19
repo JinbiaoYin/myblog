@@ -20,4 +20,9 @@ title: 首页
 - git reset : 恢复版本
 - git reflog : 查看命令记录
 
+
+## Git rebase 和 Git merge 的区别
+git rebase 重新设置基线，它会把当前分支的 commit 放到公共分支的最后面。两条分支没有交叉。
+git merge 直接合并，两条分支有交叉。
+
 ## 参考资料

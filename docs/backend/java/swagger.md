@@ -155,10 +155,10 @@ public AbstractBaseResult reg(@ApiParam(name = "tbUser", value = "用户模型")
 ### 访问 Swagger2
 访问地址：`http://ip:port/swagger-ui.html`
 
-### Swagger 常用注解说明
+## Swagger 常用注解说明
 Swagger 通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。
 
-#### 常用注解
+### 常用注解
 - `@Api`：修饰整个类，描述 Controller 的作用
 - `@ApiOperation`：描述一个类的一个方法，或者说一个接口
 - `@ApiParam`：单个参数描述
@@ -171,7 +171,7 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 - `@ApiImplicitParam`：一个请求参数
 - `@ApiImplicitParams`：多个请求参数
 
-##### @Api
+#### @Api
 说明：用在请求的类上，表示对类的说明
 
 常用参数：
@@ -196,7 +196,7 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 public class LoginController {}
 ```
 
-##### `@ApiOperation`
+#### `@ApiOperation`
 说明：用在请求的方法上，说明方法的用途、作用
 
 常用参数：
@@ -230,7 +230,7 @@ public UserModel login(@RequestParam(value = "name", required = false) String ac
 @RequestParam(value = "pass", required = false) String password){}
 ```
 
-##### `@ApiImplicitParams`
+#### `@ApiImplicitParams`
 说明：用在请求的方法上，表示一组参数说明；`@ApiImplicitParam`：用在 `@ApiImplicitParams` 注解中，指定一个请求参数的各个方面
 
 常用参数：
@@ -267,7 +267,7 @@ public UserModel login(@RequestParam(value = "name", required = false) String ac
 @RequestParam(value = "pass", required = false) String password){}
 ```
 
-##### `@ApiModel`
+#### `@ApiModel`
 说明：用于响应类上，表示一个返回响应数据的信息（这种一般用在 POST 创建的时候，使用 `@RequestBody` 这样的场景，请求参数无法使用 `@ApiImplicitParam` 注解进行描述的时候）；`@ApiModelProperty`：用在属性上，描述响应类的属性
 
 其他参数(`@ApiModelProperty`)：
@@ -305,7 +305,7 @@ public class UserModel implements Serializable{
 }
 ```
 
-##### `@ApiResponses`
+#### `@ApiResponses`
 说明：用在请求的方法上，表示一组响应；`@ApiResponse`：用在 `@ApiResponses` 中，一般用于表达一个错误的响应信息
 
 常用参数：
@@ -326,7 +326,7 @@ public JsonResult update(@PathVariable String id, UserModel model){}
 ```
 
 
-##### `@ApiParam`
+#### `@ApiParam`
 说明：用在请求方法中，描述参数信息
 
 常用参数：

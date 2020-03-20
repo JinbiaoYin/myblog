@@ -196,3 +196,11 @@ public interface SysUserMapper {
 </dependency>
 ```
 
+使用示例：
+```java
+public PageInfo<BizArticle> pageSelective(int start, int count, BizArticle record) {
+    PageHelper.startPage(start, count);
+    List<BizArticle> list = bizArticleMapper.listSelective(record);
+    return new PageInfo<BizArticle>(list);
+}
+```

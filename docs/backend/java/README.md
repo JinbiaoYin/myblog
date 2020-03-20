@@ -4,40 +4,23 @@ title: 首页
 
 ## Java 代码规范
 
-1. Controller 中的方法，对于 `@RequestMapping` 注解来说，一定要加上请求类型 `RequestMethod` ，例如：
+1. Controller 中的方法，直接使用 `@PostMapping` 或 `@GetMapping`例如：
 ```java{1}
-	@RequestMapping(value = "/save",method = RequestMethod.POST)
-	public void save(BizDonator entity){
-		bizDonatorService.save(entity);
-	}
+@ApiOperation(value = "保存", notes = "以article实体为参数")
+@PostMapping("/save")
+public ResponseResult save(@ApiParam(name = "bizArticle", value = "article实体") BizArticle bizArticle){
+	return new ResponseResult(HttpStatus.OK.value(),"操作成功~", bizArticleService.insert(bizArticle));
+}
 ```
 
-或者直接使用 `@PostMapping` ,例如：
-```java{1}
-	@PostMapping(value = "/save")
-	public JsonResult save(BizDonator entity){
-		return bizDonatorService.save(entity);
-	}
-```
-
-对于单个参数如 `pageNumber`, `pageSize`等必填参数,一定要加上 `@RequestParam`，并指定`required=true`，例如：
+对于单个参数如 `pageNumber`, `pageSize`等必填参数,一定要加上 `@RequestParam`，并指定`required=true`，如果使用 `RESTful` 风格接口，则使用 `PathVariable` 来占位，并指定 `required = true`。例如：
 ```java{3,4}
-	@GetMapping(value = "/page")
-	public JsonResult page(BizDonator BizDonator,
-			@RequestParam(value="pageNumber",defaultValue="1",required=true)int pageNumber, 
-			@RequestParam(value="pageSize",defaultValue="10",required=true)int pageSize){
-		return bizDonatorService.pageByExample(example,pageNumber,pageSize);
-	}
-```
-
-如果使用 `RESTful` 风格接口，则使用 `PathVariable` 来占位，并指定 `required = true`。
-```java{1,3,4}
-@PostMapping(value = "page/{pageNumber}/{pageSize}")
-public JsonResult page(BizDonator BizDonator,
-        @PathVariable(value="pageNumber",required=true) int pageNumber,
-        @PathVariable(value="pageSize",required=true) int pageSize
-) {
-    return page = bizDonatorService.page(BizDonator, pageNumber, pageSize);
+@ApiOperation(value = "分页查询", notes = "以article实体为参数")
+@GetMapping(value = "/page/{pageNumber}/{pageSize}")
+public ResponseResult page(@ApiParam(name = "pageNumber", value = "页码", required = true)@PathVariable("pageNumber") int pageNumber,
+							@ApiParam(name = "pageSize", value = "每页显示多少条", required = true)@PathVariable("pageSize") int pageSize,
+							@ApiParam(name = "bizArticle", value = "article实体") BizArticle bizArticle){
+	return new ResponseResult(HttpStatus.OK.value(),"查询成功", bizArticleService.pageSelective(pageNumber,pageSize,bizArticle));
 }
 ```
 

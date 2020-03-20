@@ -14,11 +14,11 @@ title: lombok
 - `@RequiredArgsConstructor`：作用于类上生成包含final和`@NonNull`注解的成员变量的构造器。
 - `@AllArgsConstructor`: 作用于类上，生成全参构造。
 - `@Data`: 作用于类上，是以下注解的集合：
- - `@ToString` 
- - `@EqualsAndHashCode` 
- - `@Getter` 
- - `@Setter`
- - `@RequiredArgsConstructor`
+  - `@ToString` 
+  - `@EqualsAndHashCode` 
+  - `@Getter` 
+  - `@Setter`
+  - `@RequiredArgsConstructor`
 - `@Builder`：作用于类上，将类转变为建造者模式
 - `@Log`：作用于类上，生成日志变量。
 

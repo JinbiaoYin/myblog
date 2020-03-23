@@ -63,7 +63,7 @@ $ git log --graph
 |/  Author: yinjinbiao <731509863@qq.com>
 |   Date:   Mon Mar 23 15:22:07 2020 +0800
 ```
-用 --reverse 参数来逆向显示所有日志。
+用 `--reverse` 参数来逆向显示所有日志。
 ```sh
 $ git log --reverse --oneline
 efd6cb2 初始化项目版本
@@ -82,7 +82,7 @@ eb59b34 新增3.txt
 33505a1 删除2.txt
 6496755 Merge branch 'testing'
 ```
-如果只想查找指定用户的提交日志可以使用命令：git log --author , 例如
+如果只想查找指定用户的提交日志可以使用命令：`git log --author` , 例如
 ```sh
 $ git log --author=yinjinbiao --oneline -5
 7e750fe (HEAD -> master) 编辑冲突

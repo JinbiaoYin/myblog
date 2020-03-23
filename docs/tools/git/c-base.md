@@ -9,7 +9,9 @@ $ git status -s
 ?? 1.txt
 ?? 2.txt
 ```
-`git status` 命令用于查看项目的当前状态。
+::: tip
+?? 表示未添加到暂存区。`git status` 命令用于查看项目的当前状态。
+:::
 
 接下来我们执行 `git add` 命令来添加文件：
 ```sh
@@ -23,11 +25,11 @@ A  1.txt
 A  2.txt
 ```
 ::: tip
-新项目中，添加所有文件很普遍，我们可以使用 `git add .` 命令来添加当前项目的所有文件。
-"<span style="color:#13A10E;">A</span>" 代表新增已提交的文件
+可以使用 `git add .` 命令来添加当前项目的所有文件。
+"<span style="color:#13A10E;">A</span>" 代表新增已添加到暂存区的文件
 :::
 
-当我们修改了文件**1.txt**后，再使用 `git status -s` 查看当前项目状态:
+修改了文件**1.txt**后，使用 `git status -s` 查看当前项目状态:
 ```sh
 $ git status -s
 AM 1.txt
@@ -116,11 +118,11 @@ index 0000000..85b2130
 :::
 
 ## git commit
-使用 `git add` 命令将想要快照的内容写入缓存区， 而执行 `git commit` 将缓存区内容添加到仓库中。
+使用 `git add` 命令将快照的内容写入暂存区， 而执行 `git commit` 将缓存区内容添加到仓库中。
 
 Git 为你的每一个提交都记录你的名字与电子邮箱地址，即上节的 `git config`。
 
-接下来我们写入缓存，并提交对 **1.txt** 的所有改动。在首个例子中，我们使用 `-m` 选项以在命令行中提供提交注释。
+使用 `-m` 选项以在命令行中提供提交注释。
 ```sh
 $ git commit -m "第一次版本提交"
 [master 3de0f1b] 第一次版本提交
@@ -128,6 +130,7 @@ $ git commit -m "第一次版本提交"
  create mode 100644 1.txt
  create mode 100644 2.txt
 ```
+
 现在我们已经记录了快照。如果我们再执行 `git status`:
 ```sh
 $ git status
@@ -137,7 +140,7 @@ nothing to commit, working tree clean
 以上输出说明我们在最近一次提交之后，没有做任何改动，是一个"working directory clean：干净的工作目录"。
 如果你没有设置 -m 选项，Git 会尝试为你打开一个编辑器以填写提交信息。 如果 Git 在你对它的配置中找不到相关信息，默认会打开 vim。
 
-如果你觉得 git add 提交缓存的流程太过繁琐，Git 也允许你用 -a 选项跳过这一步。命令格式如下：
+**如果你觉得 git add 提交缓存的流程太过繁琐，Git 也允许你用 -a 选项跳过这一步**。命令格式如下：
 ```sh
 $ git commit -am "修改1.txt"
 [master e812a72] 修改1.txt

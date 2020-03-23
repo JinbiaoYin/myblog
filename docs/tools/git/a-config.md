@@ -42,5 +42,4 @@ user.email=731509863@qq.com
 2. 也可以直接查阅某个环境变量的设定，只要把特定的名字跟在后面即可。
 ```sh
 $ git config user.name
-yinjinbiao
 ```

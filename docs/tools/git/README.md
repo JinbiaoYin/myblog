@@ -1,28 +1,48 @@
 ---
-title: 首页
+title: 前言
 ---
 
 ## 介绍
+Git 是一个开源的分布式版本控制系统，敏捷高效。
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
+Git 与常用的版本控制工具 CVS，Subversion 等不同，它采用了分布式版本库的方式，不必服务端软件支持。
 
-## 常用命令
-- git init : 本地项目初始化
-- git add : 编辑区添加到暂存区
-- git commit : 暂存区提交到分支
-- git push : 同步到远程仓库
-- git remote : 创建远程主机名
-- git clone : 克隆项目到本地
-- git pull : 拉取项目代码
-- git branch : 查看分支
-- git branch name : 创建分支
-- git checkout : 切换分支
-- git merge : 合并分支
-- git log : 查看历史记录
-- git reset : 恢复版本
-- git reflog : 查看命令记录
+## Git 与 SVN 区别
+1. Git 是分布式，SVN 不是。这是 Git 和其它非分布式版本控制系统最核心的区别。
+2. Git 把内容按元数据方式存储，SVN 是按文件。
+3. Git 分支和 SVN 的分支不同。分支在 SVN 中其实就是版本库的另一个目录。
+4. Git 没有一个全局的版本号，SVN 有。
+5. Git 的内容完整性优于 SVN 。Git 内容存储使用 SHA-1 哈希算法，确保代码内容的完整性。
 
 
-## Git rebase 和 Git merge 的区别
-git rebase 重新设置基线，它会把当前分支的 commit 放到公共分支的最后面。两条分支没有交叉。
-git merge 直接合并，两条分支有交叉。
+## Git 工作流程
+一般工作流程如下：
+1. 克隆 Git 资源作为工作目录。
+2. 在克隆的资源上添加或修改文件。
+3. 如果其他人修改，你可以更新资源。
+4. 在提交前查看修改。
+5. 提交修改。
+6. 在修改完成后，如果发现错误，可以撤回修改并再次修改并提交。
+
+## Git 工作区、暂存区和版本库
+- 工作区：电脑里可以看到的目录
+- 暂存区。一般存放在 **.git** 目录下的 **index** 文件(**.git/index**)，暂存区有时也叫索引。
+- 版本库。工作区有一个隐藏目录 **.git** ，这个不算工作区，而是 Git 的版本库。
+
+## Git 常用命令
+- `git init` : 本地项目初始化
+- `git add` : 编辑区添加到暂存区
+- `git commit` : 暂存区提交到分支
+- `git push` : 同步到远程仓库
+- `git remote` : 创建远程主机名
+- `git clone` : 克隆项目到本地
+- `git pull` : 拉取项目代码
+- `git branch` : 查看分支
+- `git branch name` : 创建分支
+- `git checkout` : 切换分支
+- `git merge` : 合并分支
+- `git log` : 查看历史记录
+- `git reset` : 恢复版本
+- `git reflog` : 查看命令记录
 
 ## 参考资料

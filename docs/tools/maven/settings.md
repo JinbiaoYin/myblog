@@ -2,7 +2,7 @@
 titile: 附：完整的 Maven Settings 配置
 ---
 
-## Maven settings 配置
+## Maven settings.xml
 
 ```xml
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"

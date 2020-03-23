@@ -56,5 +56,5 @@ export default {
 ```
 
 ## 参考资料
-[vue-amap](https://elemefe.github.io/vue-amap/#/zh-cn/introduction/install)
-[amap](https://lbs.amap.com/api/javascript-api/guide/abc/quickstart)
+- [vue-amap](https://elemefe.github.io/vue-amap/#/zh-cn/introduction/install)
+- [amap](https://lbs.amap.com/api/javascript-api/guide/abc/quickstart)

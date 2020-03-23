@@ -1,6 +1,5 @@
 ---
 title: Git 基础配置
-autoPrev: README
 ---
 
 ## Git 配置

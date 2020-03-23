@@ -1,5 +1,5 @@
 ---
-title: 分支管理
+title: Git 分支管理
 ---
 
 ## git branch

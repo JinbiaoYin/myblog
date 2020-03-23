@@ -1,5 +1,5 @@
 ---
-title: Maven Nexus
+title: 搭建 Maven Nexus 私服
 ---
 
 ## 通过docker-compose安装nexus3  

@@ -7,7 +7,7 @@ title: Github
 本例使用了 Gitee 作为远程仓库，Github 操作相同。
 
 
-## SSH
+## SSH KEY
 1. 打开git bash，输入`cd ~/.ssh`，检查是否已经有 SSH Key ，如果存在 `id_isa` 和 `id_isa.pub` ，就是已经生成密钥，不需再重新生成了。
 
 <img :src="$withBase('/tools/git/ssh_login/查看是否存在密钥.jpg')">

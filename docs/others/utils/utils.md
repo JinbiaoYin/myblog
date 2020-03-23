@@ -1,9 +1,7 @@
 ---
-autoGroup-1: common 通用类
-title: 工具类
+title: ResponseResult
 ---
 
-## ResponseResult
 ```java
 package top.yinjinbiao.video.common.dto;
 

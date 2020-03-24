@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>附：完整的 POM.xml | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea35a998.css" as="style"><link rel="preload" href="/assets/js/app.a1046340.js" as="script"><link rel="preload" href="/assets/js/2.f5461e65.js" as="script"><link rel="preload" href="/assets/js/58.f44df364.js" as="script"><link rel="preload" href="/assets/js/3.10cb9937.js" as="script"><link rel="prefetch" href="/assets/js/10.040c8836.js"><link rel="prefetch" href="/assets/js/11.cd6d8653.js"><link rel="prefetch" href="/assets/js/12.291da020.js"><link rel="prefetch" href="/assets/js/13.e5adb46c.js"><link rel="prefetch" href="/assets/js/14.0b2586be.js"><link rel="prefetch" href="/assets/js/15.bd1a69d2.js"><link rel="prefetch" href="/assets/js/16.4210f3d9.js"><link rel="prefetch" href="/assets/js/17.6c242588.js"><link rel="prefetch" href="/assets/js/18.300c673b.js"><link rel="prefetch" href="/assets/js/19.cda12a7b.js"><link rel="prefetch" href="/assets/js/20.9ff87841.js"><link rel="prefetch" href="/assets/js/21.dcde92d7.js"><link rel="prefetch" href="/assets/js/22.42f9733c.js"><link rel="prefetch" href="/assets/js/23.1f2b4f37.js"><link rel="prefetch" href="/assets/js/24.e9e3266e.js"><link rel="prefetch" href="/assets/js/25.0f20e951.js"><link rel="prefetch" href="/assets/js/26.7a30ae7f.js"><link rel="prefetch" href="/assets/js/27.a971eb0f.js"><link rel="prefetch" href="/assets/js/28.9aa7bde0.js"><link rel="prefetch" href="/assets/js/29.7e948014.js"><link rel="prefetch" href="/assets/js/30.f9c4a1c4.js"><link rel="prefetch" href="/assets/js/31.348a5d61.js"><link rel="prefetch" href="/assets/js/32.3787fd4c.js"><link rel="prefetch" href="/assets/js/33.65d60deb.js"><link rel="prefetch" href="/assets/js/34.9dec30b0.js"><link rel="prefetch" href="/assets/js/35.82184ddc.js"><link rel="prefetch" href="/assets/js/36.c2d2ecfe.js"><link rel="prefetch" href="/assets/js/37.8089f1b1.js"><link rel="prefetch" href="/assets/js/38.51100e0e.js"><link rel="prefetch" href="/assets/js/39.56d3e5d7.js"><link rel="prefetch" href="/assets/js/4.adca7eaf.js"><link rel="prefetch" href="/assets/js/40.690425b6.js"><link rel="prefetch" href="/assets/js/41.0d676f48.js"><link rel="prefetch" href="/assets/js/42.6fce1ea5.js"><link rel="prefetch" href="/assets/js/43.df3401dc.js"><link rel="prefetch" href="/assets/js/44.6fed43fe.js"><link rel="prefetch" href="/assets/js/45.a4920ffc.js"><link rel="prefetch" href="/assets/js/46.bd4b8de5.js"><link rel="prefetch" href="/assets/js/47.18a6413f.js"><link rel="prefetch" href="/assets/js/48.7666c976.js"><link rel="prefetch" href="/assets/js/49.a4a3af4f.js"><link rel="prefetch" href="/assets/js/5.7c40eeda.js"><link rel="prefetch" href="/assets/js/50.e73f7379.js"><link rel="prefetch" href="/assets/js/51.f6de18f5.js"><link rel="prefetch" href="/assets/js/52.551c245a.js"><link rel="prefetch" href="/assets/js/53.b9e6d93a.js"><link rel="prefetch" href="/assets/js/54.4f5920f0.js"><link rel="prefetch" href="/assets/js/55.927839a0.js"><link rel="prefetch" href="/assets/js/56.8b4968d3.js"><link rel="prefetch" href="/assets/js/57.8eb367bd.js"><link rel="prefetch" href="/assets/js/59.23693f1e.js"><link rel="prefetch" href="/assets/js/6.790efdf0.js"><link rel="prefetch" href="/assets/js/60.d0c9d5f0.js"><link rel="prefetch" href="/assets/js/61.f71d560a.js"><link rel="prefetch" href="/assets/js/62.0d7b369a.js"><link rel="prefetch" href="/assets/js/63.2469735b.js"><link rel="prefetch" href="/assets/js/7.47152090.js"><link rel="prefetch" href="/assets/js/8.2e571038.js"><link rel="prefetch" href="/assets/js/9.e16a0df8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea35a998.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MAVEN</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/maven/" class="sidebar-link">首页</a></li><li><a href="/tools/maven/a-config.html" class="sidebar-link">maven 配置镜像和私服</a></li><li><a href="/tools/maven/b-nexus.html" class="sidebar-link">搭建 Maven Nexus 私服</a></li><li><a href="/tools/maven/pom.html" class="active sidebar-link">附：完整的 POM.xml</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tools/maven/pom.html#pom" class="sidebar-link">POM</a></li></ul></li><li><a href="/tools/maven/settings.html" class="sidebar-link">Maven settings.xml</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="pom"><a href="#pom" class="header-anchor">#</a> POM</h2> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0http://maven.apache.org/maven-v4_0_0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--父项目的坐标。如果项目中没有规定某个元素的值，那么父项目中的对应值即为项目的默认值。 坐标包括group ID，artifact ID和 
+        version。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--被继承的父项目的构件标识符 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--被继承的父项目的全球唯一标识符 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--被继承的父项目的版本 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!-- 父项目的pom.xml文件的相对路径。相对路径允许你选择一个不同的路径。默认值是../pom.xml。Maven首先在构建当前项目的地方寻找父项 
+            目的pom，其次在文件系统的这个位置（relativePath位置），然后在本地仓库，最后在远程仓库寻找父项目的pom。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relativePath</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--声明项目描述符遵循哪一个POM模型版本。模型本身的版本很少改变，虽然如此，但它仍然是必不可少的，这是为了当Maven引入了新的特性或者其他模型变更的时候，确保稳定性。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目的全球唯一标识符，通常使用全限定的包名区分该项目和其他项目。并且构建时生成的路径也是由此生成， 如com.mycompany.app生成的相对路径为：/com/mycompany/app --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>asia.banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 构件的标识符，它和group ID一起唯一标识一个构件。换句话说，你不能有两个不同的项目拥有同样的artifact ID和groupID；在某个 
+        特定的group ID下，artifact ID也必须是唯一的。构件是项目产生的或使用的一个东西，Maven为项目产生的构件包括：JARs，源 码，二进制发布和WARs等。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>banseon-maven2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目产生的构件类型，例如jar、war、ear、pom。插件可以创建他们自己的构件类型，所以前面列的不是全部构件类型 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>packaging</span><span class="token punctuation">&gt;</span></span>jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>packaging</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目当前版本，格式为:主版本.次版本.增量版本-限定版本号 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目的名称, Maven产生的文档用 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>banseon-maven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目主页的URL, Maven产生的文档用 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://www.baidu.com/banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，就可以包含HTML标 
+        签）， 不鼓励使用纯文本描述。如果你需要修改产生的web站点的索引页面，你应该修改你自己的索引页文件，而不是调整这里的文档。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>A maven project to study maven.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--描述了这个项目构建环境中的前提条件。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>prerequisites</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--构建该项目或使用该插件所需要的Maven的最低版本 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>prerequisites</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目的问题管理系统(Bugzilla, Jira, Scarab,或任何你喜欢的问题管理系统)的名称和URL，本例为 jira --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>issueManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--问题管理系统（例如jira）的名字， --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>system</span><span class="token punctuation">&gt;</span></span>jira<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>system</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--该项目使用的问题管理系统的URL --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://jira.baidu.com/banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>issueManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目持续集成信息 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ciManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--持续集成系统的名字，例如continuum --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>system</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--该项目使用的持续集成系统的URL（如果持续集成系统有web接口的话）。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--构建完成时，需要通知的开发者/用户的配置项。包括被通知者信息和通知条件（错误，失败，成功，警告） --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>notifiers</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--配置一种方式，当构建中断时，以该方式通知用户/开发者 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>notifier</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--传送通知的途径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--发生错误时是否通知 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sendOnError</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--构建失败时是否通知 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sendOnFailure</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--构建成功时是否通知 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sendOnSuccess</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--发生警告时是否通知 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sendOnWarning</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--不赞成使用。通知发送到哪里 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>address</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--扩展配置项 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>notifier</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>notifiers</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ciManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目创建年份，4位数字。当产生版权信息时需要使用这个值。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inceptionYear</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token comment">&lt;!--项目相关邮件列表信息 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mailingLists</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--该元素描述了项目相关的所有邮件列表。自动产生的网站引用这些信息。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mailingList</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--邮件的名称 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--发送邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>post</span><span class="token punctuation">&gt;</span></span>banseon@126.com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>post</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--订阅邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>subscribe</span><span class="token punctuation">&gt;</span></span>banseon@126.com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>subscribe</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--取消订阅邮件的地址或链接，如果是邮件地址，创建文档时，mailto: 链接会被自动创建 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>unsubscribe</span><span class="token punctuation">&gt;</span></span>banseon@126.com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>unsubscribe</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--你可以浏览邮件信息的URL --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>archive</span><span class="token punctuation">&gt;</span></span>http:/hi.baidu.com/banseon/demo/dev/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>archive</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mailingList</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mailingLists</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目开发者列表 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>developers</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--某个项目开发者的信息 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>developer</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--SCM里项目开发者的唯一标识符 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>HELLO WORLD<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者的全名 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者的email --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>email</span><span class="token punctuation">&gt;</span></span>banseon@126.com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>email</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者的主页的URL --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者在项目中扮演的角色，角色元素描述了各种角色 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>roles</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span><span class="token punctuation">&gt;</span></span>Project Manager<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>role</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>role</span><span class="token punctuation">&gt;</span></span>Architect<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>role</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>roles</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者所属组织 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>organization</span><span class="token punctuation">&gt;</span></span>demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>organization</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者所属组织的URL --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>organizationUrl</span><span class="token punctuation">&gt;</span></span>http://hi.baidu.com/banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>organizationUrl</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者属性，如即时消息如何处理等 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dept</span><span class="token punctuation">&gt;</span></span>No<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dept</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目开发者所在时区， -11到12范围内的整数。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timezone</span><span class="token punctuation">&gt;</span></span>-5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>timezone</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>developer</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>developers</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目的其他贡献者列表 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>contributors</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--项目的其他贡献者。参见developers/developer元素 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>contributor</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>email</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>organization</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>organizationUrl</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>roles</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>timezone</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>contributor</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>contributors</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--该元素描述了项目所有License列表。 应该只列出该项目的license列表，不要列出依赖项目的 license列表。如果列出多个license，用户可以选择它们中的一个而不是接受所有license。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>licenses</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--描述了项目的license，用于生成项目的web站点的license页面，其他一些报表和validation也会用到该元素。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>license</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--license用于法律上的名称 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Apache 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--官方的license正文页面的URL --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://www.baidu.com/banseon/LICENSE-2.0.txt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--项目分发的主要方式： repo，可以从Maven库下载 manual， 用户必须手动下载和安装依赖 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distribution</span><span class="token punctuation">&gt;</span></span>repo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distribution</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--关于license的补充信息 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comments</span><span class="token punctuation">&gt;</span></span>A business-friendly OSS license<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comments</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>license</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>licenses</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--SCM(Source Control Management)标签允许你配置你的代码库，供Maven web站点和其它插件使用。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scm</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--SCM的URL,该URL描述了版本库和如何连接到版本库。欲知详情，请看SCMs提供的URL格式和列表。该连接只读。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>connection</span><span class="token punctuation">&gt;</span></span>
+            scm:svn:http://svn.baidu.com/banseon/maven/banseon/banseon-maven2-trunk(dao-trunk)
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>connection</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--给开发者使用的，类似connection元素。即该连接不仅仅只读 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>developerConnection</span><span class="token punctuation">&gt;</span></span>
+            scm:svn:http://svn.baidu.com/banseon/maven/banseon/dao-trunk
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>developerConnection</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--当前代码的标签，在开发阶段默认为HEAD --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--指向项目的可浏览SCM库（例如ViewVC或者Fisheye）的URL。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://svn.baidu.com/banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scm</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--描述项目所属组织的各种属性。Maven产生的文档用 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>organization</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--组织的全名 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--组织主页的URL --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://www.baidu.com/banseon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>organization</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--构建项目需要的信息 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sourceDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--该元素设置了项目脚本源码目录，该目录和源码目录不同：绝大多数情况下，该目录下的内容 会被拷贝到输出目录(因为脚本是被解释的，而不是被编译的)。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scriptSourceDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--该元素设置了项目单元测试使用的源码目录，当测试项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testSourceDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--被编译过的应用程序class文件存放的目录。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--被编译过的测试class文件存放的目录。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testOutputDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--使用来自该项目的一系列构建扩展 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--描述使用到的构建扩展。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--构建扩展的groupId --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--构建扩展的artifactId --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--构建扩展的版本 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>extension</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>extensions</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--当项目没有规定目标（Maven2 叫做阶段）时的默认值 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>defaultGoal</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resources</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--这个元素描述了项目相关或测试相关的所有资源路径 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resource</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!-- 描述了资源的目标路径。该路径相对target/classes目录（例如${project.build.outputDirectory}）。举个例 
+                    子，如果你想资源在特定的包里(org.apache.maven.messages)，你就必须该元素设置为org/apache/maven /messages。然而，如果你只是想把资源放到源码目录结构里，就不需要该配置。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>targetPath</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--是否使用参数值代替参数名。参数值取自properties元素或者文件里配置的属性，文件在filters元素里列出。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filtering</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--描述存放资源的目录，该路径相对POM路径 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--包含的模式列表，例如**/*.xml. --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includes</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--排除的模式列表，例如**/*.xml --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>excludes</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resource</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resources</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--这个元素描述了单元测试相关的所有资源路径，例如和单元测试相关的属性文件。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testResources</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--这个元素描述了测试相关的所有资源路径，参见build/resources/resource元素的说明 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testResource</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>targetPath</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filtering</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includes</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>excludes</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testResource</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testResources</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--构建产生的所有文件存放的目录 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--产生的构件的文件名，默认值是${artifactId}-${version}。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>finalName</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--当filtering开关打开时，使用到的过滤器属性文件列表 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filters</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--子项目可以引用的默认插件信息。该插件配置项直到被引用时才会被解析或绑定到生命周期。给定插件的任何本地配置都会覆盖这里的配置 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--使用的插件列表 。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--plugin元素包含描述插件所需要的信息。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--插件在仓库里的group ID --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token comment">&lt;!--插件在仓库里的artifact ID --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token comment">&lt;!--被使用的插件的版本（或版本范围） --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token comment">&lt;!--是否从该插件下载Maven扩展（例如打包和类型处理器），由于性能原因，只有在真需要下载时，该元素才被设置成enabled。 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token comment">&lt;!--在构建生命周期中执行一组目标的配置。每个目标可能有不同的配置。 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token comment">&lt;!--execution元素包含了插件执行需要的信息 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token comment">&lt;!--执行目标的标识符，用于标识构建过程中的目标，或者匹配继承过程中需要合并的执行目标 --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token comment">&lt;!--绑定了目标的构建生命周期阶段，如果省略，目标会被绑定到源数据里配置的默认阶段 --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token comment">&lt;!--配置的执行目标 --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token comment">&lt;!--配置是否被传播到子POM --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token comment">&lt;!--作为DOM对象的配置 --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--项目引入插件所需要的额外依赖 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                            ......
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--任何配置是否被传播到子项目 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token comment">&lt;!--作为DOM对象的配置 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--使用的插件列表 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--参见build/pluginManagement/plugins/plugin元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                        ......
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--在列的项目构建profile，如果被激活，会修改构建处理 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profiles</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--根据环境参数或命令行参数激活某个构建处理 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--构建配置的唯一标识符。即用于命令行激活，也用于在继承时合并具有相同标识符的profile。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--自动触发profile的条件逻辑。Activation是profile的开启钥匙。profile的力量来自于它 能够在某些特定的环境中自动使用某些特定的值；这些环境通过activation元素指定。activation元素并不是激活profile的唯一方式。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activation</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--profile默认是否激活的标志 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeByDefault</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--当匹配的jdk被检测到，profile被激活。例如，1.4激活JDK1.4，1.4.0_2，而!1.4激活所有版本不是以1.4开头的JDK。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdk</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--当匹配的操作系统属性被检测到，profile被激活。os元素可以定义一些操作系统相关的属性。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>os</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的操作系统的名字 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Windows XP<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的操作系统所属家族(如 'windows') --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>family</span><span class="token punctuation">&gt;</span></span>Windows<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>family</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的操作系统体系结构 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arch</span><span class="token punctuation">&gt;</span></span>x86<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arch</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的操作系统版本 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>5.1.2600<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>os</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--如果Maven检测到某一个属性（其值可以在POM中通过${名称}引用），其拥有对应的名称和值，Profile就会被激活。如果值 字段是空的，那么存在属性名称字段就会激活profile，否则按区分大小写方式匹配属性值字段 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的属性的名称 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>mavenVersion<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--激活profile的属性的值 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>2.0.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--提供一个文件名，通过检测该文件的存在或不存在来激活profile。missing检查文件是否存在，如果不存在则激活 profile。另一方面，exists则会检查文件是否存在，如果存在则激活profile。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--如果指定的文件存在，则激活profile。 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exists</span><span class="token punctuation">&gt;</span></span>/usr/local/hudson/hudson-home/jobs/maven-guide-zh-to-production/workspace/
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exists</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--如果指定的文件不存在，则激活profile。 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>missing</span><span class="token punctuation">&gt;</span></span>/usr/local/hudson/hudson-home/jobs/maven-guide-zh-to-production/workspace/
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>missing</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activation</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--构建项目所需要的信息。参见build元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>defaultGoal</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resources</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resource</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>targetPath</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filtering</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includes</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>excludes</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resource</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resources</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testResources</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testResource</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>targetPath</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filtering</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includes</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>excludes</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testResource</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testResources</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>finalName</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filters</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token comment">&lt;!--参见build/pluginManagement/plugins/plugin元素 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">&gt;</span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span> <span class="token punctuation">/&gt;</span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                                <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                                    ......
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginManagement</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--参见build/pluginManagement/plugins/plugin元素 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phase</span> <span class="token punctuation">/&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                            <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                                ......
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--模块（有时称作子项目） 被构建成项目的一部分。列出的每个模块元素是指向该模块的目录的相对路径 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modules</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--发现依赖和扩展的远程仓库列表。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--参见repositories/repository元素 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--发现插件的远程仓库列表，这些插件用于构建和报表 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--包含需要连接到远程插件仓库的信息.参见repositories/repository元素 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--该元素描述了项目相关的所有依赖。 这些依赖组成了项目构建过程中的一个个环节。它们自动从项目定义的仓库中下载。要获取更多信息，请看项目依赖机制。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                    ......
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--不赞成使用. 现在Maven忽略该元素. --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reports</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--该元素包括使用报表插件产生报表的规范。当用户执行&quot;mvn site&quot;，这些报表就会运行。 在页面导航栏能看到所有报表的链接。参见reporting元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reporting</span><span class="token punctuation">&gt;</span></span>
+                ......
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reporting</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--参见dependencyManagement元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                        ......
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--参见distributionManagement元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+                ......
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--参见properties元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profile</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profiles</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--模块（有时称作子项目） 被构建成项目的一部分。列出的每个模块元素是指向该模块的目录的相对路径 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modules</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token comment">&lt;!--发现依赖和扩展的远程仓库列表。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--包含需要连接到远程仓库的信息 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--如何处理远程仓库里发布版本的下载 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--true或者false表示该仓库是否为下载某种类型构件（发布版，快照版）开启。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--该元素指定更新发生的频率。Maven会比较本地POM和远程POM的时间戳。这里的选项是：always（一直），daily（默认，每日），interval：X（这里X是以分钟为单位的时间间隔），或者never（从不）。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--当Maven验证构件校验文件失败时该怎么做：ignore（忽略），fail（失败），或者warn（警告）。 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- 如何处理远程仓库里快照版本的下载。有了releases和snapshots这两组配置，POM就可以在每个单独的仓库中，为每种类型的构件采取不同的 
+                策略。例如，可能有人会决定只为开发目的开启对快照版本下载的支持。参见repositories/repository/releases元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>updatePolicy</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checksumPolicy</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--远程仓库唯一标识符。可以用来匹配在settings.xml文件里配置的远程仓库 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>banseon-repository-proxy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--远程仓库名称 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>banseon-repository-proxy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--远程仓库URL，按protocol://hostname/path形式 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://192.168.1.169:9999/repository/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- 用于定位和排序构件的仓库布局类型-可以是default（默认）或者legacy（遗留）。Maven 2为其仓库提供了一个默认的布局；然 
+                而，Maven 1.x有一种不同的布局。我们可以使用该元素指定布局是default（默认）还是legacy（遗留）。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span><span class="token punctuation">&gt;</span></span>default<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>layout</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--发现插件的远程仓库列表，这些插件用于构建和报表 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--包含需要连接到远程插件仓库的信息.参见repositories/repository元素 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+            ......
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+ 
+ 
+    <span class="token comment">&lt;!--该元素描述了项目相关的所有依赖。 这些依赖组成了项目构建过程中的一个个环节。它们自动从项目定义的仓库中下载。要获取更多信息，请看项目依赖机制。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--依赖的group ID --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.maven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--依赖的artifact ID --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>maven-artifact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--依赖的版本号。 在Maven 2里, 也可以配置成版本号的范围。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>3.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- 依赖类型，默认类型是jar。它通常表示依赖的文件的扩展名，但也有例外。一个类型可以被映射成另外一个扩展名或分类器。类型经常和使用的打包方式对应， 
+                尽管这也有例外。一些类型的例子：jar，war，ejb-client和test-jar。如果设置extensions为 true，就可以在 plugin里定义新的类型。所以前面的类型的例子不完整。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">&gt;</span></span>jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- 依赖的分类器。分类器可以区分属于同一个POM，但不同构建方式的构件。分类器名被附加到文件名的版本号后面。例如，如果你想要构建两个单独的构件成 
+                JAR，一个使用Java 1.4编译器，另一个使用Java 6编译器，你就可以使用分类器来生成两个单独的JAR构件。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>classifier</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>classifier</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--依赖范围。在项目发布过程中，帮助决定哪些构件被包括进来。欲知详情请参考依赖机制。 - compile ：默认范围，用于编译 - provided：类似于编译，但支持你期待jdk或者容器提供，类似于classpath 
+                - runtime: 在执行时需要使用 - test: 用于test任务时使用 - system: 需要外在提供相应的元素。通过systemPath来取得 
+                - systemPath: 仅用于范围为system。提供相应的路径 - optional: 当项目自身被依赖时，标注依赖是否传递。用于连续依赖时使用 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--仅供system范围使用。注意，不鼓励使用这个元素，并且在新的版本中该元素可能被覆盖掉。该元素为依赖规定了文件系统上的路径。需要绝对路径而不是相对路径。推荐使用属性匹配绝对路径，例如${java.home}。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>systemPath</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>systemPath</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--当计算传递依赖时， 从依赖构件列表里，列出被排除的依赖构件集。即告诉maven你只依赖指定的项目，不依赖项目的依赖。此元素主要用于解决版本冲突问题 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--可选依赖，如果你在项目B中把C依赖声明为可选，你就需要在依赖于B的项目（例如项目A）中显式的引用对C的依赖。可选依赖阻断依赖的传递性。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--不赞成使用. 现在Maven忽略该元素. --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reports</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reports</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--该元素描述使用报表插件产生报表的规范。当用户执行&quot;mvn site&quot;，这些报表就会运行。 在页面导航栏能看到所有报表的链接。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reporting</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--true，则，网站不包括默认的报表。这包括&quot;项目信息&quot;菜单中的报表。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>excludeDefaults</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--所有产生的报表存放到哪里。默认值是${project.build.directory}/site。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputDirectory</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--使用的报表插件和他们的配置。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--plugin元素包含描述报表插件需要的信息 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!--报表插件在仓库里的group ID --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--报表插件在仓库里的artifact ID --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--被使用的报表插件的版本（或版本范围） --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--任何配置是否被传播到子项目 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--报表插件的配置 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token comment">&lt;!--一组报表的多重规范，每个规范可能有不同的配置。一个规范（报表集）对应一个执行目标 。例如，有1，2，3，4，5，6，7，8，9个报表。1，2，5构成A报表集，对应一个执行目标。2，5，8构成B报表集，对应另一个执行目标 --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reportSets</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment">&lt;!--表示报表的一个集合，以及产生该集合的配置 --&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reportSet</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token comment">&lt;!--报表集合的唯一标识符，POM继承时用到 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token comment">&lt;!--产生报表集合时，被使用的报表的配置 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token comment">&lt;!--配置是否被继承到子POMs --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>inherited</span> <span class="token punctuation">/&gt;</span></span>
+                        <span class="token comment">&lt;!--这个集合里使用到哪些报表 --&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>reports</span> <span class="token punctuation">/&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reportSet</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reportSets</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>reporting</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 继承自该项目的所有子项目的默认依赖信息。这部分的依赖信息不会被立即解析,而是当子项目声明一个依赖（必须描述group ID和 artifact 
+        ID信息），如果group ID和artifact ID以外的一些信息没有描述，则通过group ID和artifact ID 匹配到这里的依赖，并使用这里的依赖信息。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--参见dependencies/dependency元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                ......
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--项目分发信息，在执行mvn deploy后表示要发布的位置。有了这些信息就可以把网站部署到远程服务器或者把构件部署到远程仓库。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--部署项目产生的构件到远程仓库需要的信息 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--是分配给快照一个唯一的版本号（由时间戳和构建流水号）？还是每次都使用相同的版本号？参见repositories/repository元素 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uniqueVersion</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>banseon-maven2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>banseon maven2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>file://${basedir}/target/deploy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--构件的快照部署到哪里？如果没有配置该元素，默认部署到repository元素配置的仓库，参见distributionManagement/repository元素 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uniqueVersion</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>banseon-maven2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Banseon-maven2 Snapshot Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>scp://svn.baidu.com/banseon:/usr/local/maven-snapshot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--部署项目的网站需要的信息 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>site</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--部署位置的唯一标识符，用来匹配站点和settings.xml文件里的配置 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>banseon-site<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--部署位置的名称 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>business api website<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--部署位置的URL，按protocol://hostname/path形式 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>
+                scp://svn.baidu.com/banseon:/var/www/localhost/banseon-web
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>site</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--项目下载页面的URL。如果没有该元素，用户应该参考主页。使用该元素的原因是：帮助定位那些不在仓库里的构件（由于license限制）。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>downloadUrl</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--如果构件有了新的group ID和artifact ID（构件移到了新的位置），这里列出构件的重定位信息。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relocation</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!--构件新的group ID --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--构件新的artifact ID --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--构件新的版本号 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token comment">&lt;!--显示给用户的，关于移动的额外信息，例如原因。 --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>relocation</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- 给出该构件在远程仓库的状态。不得在本地项目中设置该元素，因为这是工具自动更新的。有效的值有：none（默认），converted（仓库管理员从 
+            Maven 1 POM转换过来），partner（直接从伙伴Maven 2仓库同步过来），deployed（从Maven 2实例部 署），verified（被核实时正确的和最终的）。 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>status</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--以值替代名称，Properties可以在整个POM中使用，也可以作为触发条件（见settings.xml配置文件里activation元素的说明）。格式是&lt;name&gt;value&lt;/name&gt;。 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/JinbiaoYin/myblog/edit/master/docs/tools/maven/pom.md" target="_blank" rel="noopener noreferrer">编辑！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-03-11 17:25:02</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tools/maven/b-nexus.html" class="prev">
+        搭建 Maven Nexus 私服
+      </a></span> <span class="next"><a href="/tools/maven/settings.html">
+        Maven settings.xml
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.a1046340.js" defer></script><script src="/assets/js/2.f5461e65.js" defer></script><script src="/assets/js/58.f44df364.js" defer></script><script src="/assets/js/3.10cb9937.js" defer></script>
+  </body>
+</html>

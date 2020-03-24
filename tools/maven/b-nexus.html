@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>搭建 Maven Nexus 私服 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea35a998.css" as="style"><link rel="preload" href="/assets/js/app.a1046340.js" as="script"><link rel="preload" href="/assets/js/2.f5461e65.js" as="script"><link rel="preload" href="/assets/js/57.8eb367bd.js" as="script"><link rel="preload" href="/assets/js/3.10cb9937.js" as="script"><link rel="prefetch" href="/assets/js/10.040c8836.js"><link rel="prefetch" href="/assets/js/11.cd6d8653.js"><link rel="prefetch" href="/assets/js/12.291da020.js"><link rel="prefetch" href="/assets/js/13.e5adb46c.js"><link rel="prefetch" href="/assets/js/14.0b2586be.js"><link rel="prefetch" href="/assets/js/15.bd1a69d2.js"><link rel="prefetch" href="/assets/js/16.4210f3d9.js"><link rel="prefetch" href="/assets/js/17.6c242588.js"><link rel="prefetch" href="/assets/js/18.300c673b.js"><link rel="prefetch" href="/assets/js/19.cda12a7b.js"><link rel="prefetch" href="/assets/js/20.9ff87841.js"><link rel="prefetch" href="/assets/js/21.dcde92d7.js"><link rel="prefetch" href="/assets/js/22.42f9733c.js"><link rel="prefetch" href="/assets/js/23.1f2b4f37.js"><link rel="prefetch" href="/assets/js/24.e9e3266e.js"><link rel="prefetch" href="/assets/js/25.0f20e951.js"><link rel="prefetch" href="/assets/js/26.7a30ae7f.js"><link rel="prefetch" href="/assets/js/27.a971eb0f.js"><link rel="prefetch" href="/assets/js/28.9aa7bde0.js"><link rel="prefetch" href="/assets/js/29.7e948014.js"><link rel="prefetch" href="/assets/js/30.f9c4a1c4.js"><link rel="prefetch" href="/assets/js/31.348a5d61.js"><link rel="prefetch" href="/assets/js/32.3787fd4c.js"><link rel="prefetch" href="/assets/js/33.65d60deb.js"><link rel="prefetch" href="/assets/js/34.9dec30b0.js"><link rel="prefetch" href="/assets/js/35.82184ddc.js"><link rel="prefetch" href="/assets/js/36.c2d2ecfe.js"><link rel="prefetch" href="/assets/js/37.8089f1b1.js"><link rel="prefetch" href="/assets/js/38.51100e0e.js"><link rel="prefetch" href="/assets/js/39.56d3e5d7.js"><link rel="prefetch" href="/assets/js/4.adca7eaf.js"><link rel="prefetch" href="/assets/js/40.690425b6.js"><link rel="prefetch" href="/assets/js/41.0d676f48.js"><link rel="prefetch" href="/assets/js/42.6fce1ea5.js"><link rel="prefetch" href="/assets/js/43.df3401dc.js"><link rel="prefetch" href="/assets/js/44.6fed43fe.js"><link rel="prefetch" href="/assets/js/45.a4920ffc.js"><link rel="prefetch" href="/assets/js/46.bd4b8de5.js"><link rel="prefetch" href="/assets/js/47.18a6413f.js"><link rel="prefetch" href="/assets/js/48.7666c976.js"><link rel="prefetch" href="/assets/js/49.a4a3af4f.js"><link rel="prefetch" href="/assets/js/5.7c40eeda.js"><link rel="prefetch" href="/assets/js/50.e73f7379.js"><link rel="prefetch" href="/assets/js/51.f6de18f5.js"><link rel="prefetch" href="/assets/js/52.551c245a.js"><link rel="prefetch" href="/assets/js/53.b9e6d93a.js"><link rel="prefetch" href="/assets/js/54.4f5920f0.js"><link rel="prefetch" href="/assets/js/55.927839a0.js"><link rel="prefetch" href="/assets/js/56.8b4968d3.js"><link rel="prefetch" href="/assets/js/58.f44df364.js"><link rel="prefetch" href="/assets/js/59.23693f1e.js"><link rel="prefetch" href="/assets/js/6.790efdf0.js"><link rel="prefetch" href="/assets/js/60.d0c9d5f0.js"><link rel="prefetch" href="/assets/js/61.f71d560a.js"><link rel="prefetch" href="/assets/js/62.0d7b369a.js"><link rel="prefetch" href="/assets/js/63.2469735b.js"><link rel="prefetch" href="/assets/js/7.47152090.js"><link rel="prefetch" href="/assets/js/8.2e571038.js"><link rel="prefetch" href="/assets/js/9.e16a0df8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea35a998.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link router-link-active">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MAVEN</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/maven/" class="sidebar-link">首页</a></li><li><a href="/tools/maven/a-config.html" class="sidebar-link">maven 配置镜像和私服</a></li><li><a href="/tools/maven/b-nexus.html" class="active sidebar-link">搭建 Maven Nexus 私服</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tools/maven/b-nexus.html#通过docker-compose安装nexus3" class="sidebar-link">通过docker-compose安装nexus3</a></li><li class="sidebar-sub-header"><a href="/tools/maven/b-nexus.html#配置代理仓库" class="sidebar-link">配置代理仓库</a></li><li class="sidebar-sub-header"><a href="/tools/maven/b-nexus.html#使用nexus私服上传" class="sidebar-link">使用nexus私服上传</a></li><li class="sidebar-sub-header"><a href="/tools/maven/b-nexus.html#snapshots-与-releases-的区别" class="sidebar-link">Snapshots 与 Releases 的区别</a></li><li class="sidebar-sub-header"><a href="/tools/maven/b-nexus.html#上传第三方-jar-包" class="sidebar-link">上传第三方 JAR 包</a></li></ul></li><li><a href="/tools/maven/pom.html" class="sidebar-link">附：完整的 POM.xml</a></li><li><a href="/tools/maven/settings.html" class="sidebar-link">Maven settings.xml</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="通过docker-compose安装nexus3"><a href="#通过docker-compose安装nexus3" class="header-anchor">#</a> 通过docker-compose安装nexus3</h2> <p>进入Docker hub上拉取sonatype/nexus3</p> <div class="language- extra-class"><pre class="language-text"><code>docker pull sonatype/nexus3
+</code></pre></div><p>新建/usr/local/docker/nexus/docker-compose.yml，通过docker-compose.yml启动容器。</p> <p><code>docker-compose.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">nexus</span><span class="token punctuation">:</span>
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> sonatype/nexus3
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> nexus
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 8081<span class="token punctuation">:</span><span class="token number">8081</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /usr/local/docker/nexus/data<span class="token punctuation">:</span>/nexus<span class="token punctuation">-</span>data
+</code></pre></div><p>保存并启动：</p> <div class="language- extra-class"><pre class="language-text"><code>docker-compose up -d
+</code></pre></div><p>查看容器是否启动:</p> <div class="language- extra-class"><pre class="language-text"><code>docker ps
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>如果启动报错无权限，需要赋予数据卷的权限</p> <div class="language- extra-class"><pre class="language-text"><code>chmod 777 data/
+</code></pre></div><p>阿里云用户别忘了在阿里云控制台，把端口暴露出去。</p> <p>打开http://ip:port/，登录名为 admin ,密码根据提示查找，我这里密码文件在 <code>/usr/local/docker/nexus/data/admin.password</code>,输入用户名密码即可登录。
+登录后重设密码。</p></div> <h2 id="配置代理仓库"><a href="#配置代理仓库" class="header-anchor">#</a> 配置代理仓库</h2> <p>配置代理仓库后，项目可从私服上下载依赖。</p> <p>repositories是私服maven仓库，pluginRepositories是插件仓库，maven-public是发行版和快照版的集合，下面可以单独配置。  在pom.xml中添加如下：url改成私服地址。</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Plugin Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>  
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>  
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>url 避免写错，在部署好的nexus服务上可以直接拷贝。</p></div> <h2 id="使用nexus私服上传"><a href="#使用nexus私服上传" class="header-anchor">#</a> 使用nexus私服上传</h2> <p>在maven的 <code>setting.xml</code> 中配置 <code>servers</code> 节点，<code>nexus-releases</code> 为发行版仓库，<code>nexus-snapshots</code> 为快照版仓库，<code>id</code> 为Maven想要连接的id。</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">&gt;</span></span>admin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>username</span><span class="token punctuation">&gt;</span></span>admin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>username</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>password</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>password</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>在本地 <code>pom.xml</code> 中，配置自动化部署，其中 <code>id</code>必须与上述 <code>server</code> 中配置的一致，<code>url</code> 配置为私服地址。代表使用 <code>server</code> 中的账号密码可以连接相同 <code>id</code> 的仓库，实现上传。</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>   
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Release Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Snapshot Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="snapshots-与-releases-的区别"><a href="#snapshots-与-releases-的区别" class="header-anchor">#</a> Snapshots 与 Releases 的区别</h2> <ul><li>nexus-releases: 用于发布 Release 版本</li> <li>nexus-snapshots: 用于发布 Snapshot 版本（快照版）</li></ul> <p>**注意：**在项目 pom.xml 中设置的版本号添加 SNAPSHOT 标识的都会发布为 SNAPSHOT 版本，没有 SNAPSHOT 标识的都会发布为 RELEASE 版本。
+SNAPSHOT 版本会自动加一个时间作为标识，如：1.0.0-SNAPSHOT 发布后为变成 1.0.0-SNAPSHOT-20180522.123456-1.jar
+当使用mvn deploy时，会先在本地打包，然后上传到私服上。</p> <h2 id="上传第三方-jar-包"><a href="#上传第三方-jar-包" class="header-anchor">#</a> 上传第三方 JAR 包</h2> <p>Nexus 3.0 不支持页面上传，可使用 maven 命令：  Dfile为本地要上传的jar包地址，Durl为要上传到私服的哪个仓库中。DrepositoryId为仓库的id
+如第三方JAR包：aliyun-sdk-oss-2.2.3.jar</p> <div class="language- extra-class"><pre class="language-text"><code>mvn deploy:deploy-file 
+  -DgroupId=com.aliyun.oss 
+  -DartifactId=aliyun-sdk-oss 
+  -Dversion=2.2.3 
+  -Dpackaging=jar 
+  -Dfile=D:\aliyun-sdk-oss-2.2.3.jar 
+  -Durl=http://127.0.0.1:8081/repository/maven-releases/ 
+  -DrepositoryId=nexus-releases
+</code></pre></div><p>建议在上传第三方 JAR 包时，创建单独的第三方 JAR 包管理仓库，便于管理有维护。（maven-3rd）<br>
+-DrepositoryId=nexus-releases 对应的是 settings.xml 中 Servers 配置的 ID 名称。（授权）</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/JinbiaoYin/myblog/edit/master/docs/tools/maven/b-nexus.md" target="_blank" rel="noopener noreferrer">编辑！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-03-23 20:02:08</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tools/maven/a-config.html" class="prev">
+        maven 配置镜像和私服
+      </a></span> <span class="next"><a href="/tools/maven/pom.html">
+        附：完整的 POM.xml
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.a1046340.js" defer></script><script src="/assets/js/2.f5461e65.js" defer></script><script src="/assets/js/57.8eb367bd.js" defer></script><script src="/assets/js/3.10cb9937.js" defer></script>
+  </body>
+</html>

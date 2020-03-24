@@ -40,7 +40,8 @@ module.exports = [
         text: '其它', items: [    
             { text: 'CICD', link: '/others/cicd/'},
             { text: 'Issues', link: '/others/issues/' },
-            { text: 'Utils', link: '/others/utils/' }
+            { text: 'Utils', link: '/others/utils/' },
+            { text: 'Utils', link: '/others/interview/' },
         ]
     }
 ]

@@ -82,3 +82,22 @@ change_site分支中修改11行
 >>>>>>> change_site
 ```
 编辑完冲突后，重新提交`git commit -am '冲突解决'`。
+
+## git rebase
+与 `git merge` 不同的是，`git rebase` 会将所有的提交形成一条分支线。
+例如，有两个分支**master**和**dev**，公共节点为**C3**，**master**分支上新增**C4,C5**，**dev**分支上新增**C6,C7**，当在**master**上执行：
+```sh
+$ git rebase dev
+```
+**master**历史树为成为一条直线，而若执行：
+```sh
+$ git merge dev
+```
+历史树会在**C3**分叉，然后会新增节点**C8**汇合。
+
+当`git rebase`遇到冲突时，解决冲突后，执行：
+```sh
+$ git add .
+$ git rebase --continue
+```
+会继续应用余下的补丁。

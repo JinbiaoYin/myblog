@@ -41,7 +41,7 @@ module.exports = [
             { text: 'CICD', link: '/others/cicd/'},
             { text: 'Issues', link: '/others/issues/' },
             { text: 'Utils', link: '/others/utils/' },
-            { text: 'Utils', link: '/others/interview/' },
+            { text: '面试宝典', link: '/others/interview/' },
         ]
     }
 ]

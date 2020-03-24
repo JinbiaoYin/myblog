@@ -84,20 +84,22 @@ change_site分支中修改11行
 编辑完冲突后，重新提交`git commit -am '冲突解决'`。
 
 ## git rebase
-与 `git merge` 不同的是，`git rebase` 会将所有的提交形成一条分支线。
-例如，有两个分支**master**和**dev**，公共节点为**C3**，**master**分支上新增**C4,C5**，**dev**分支上新增**C6,C7**，当在**master**上执行：
+与 `git merge` 不同的是，`git rebase` 会将所有的提交形成一条历史直线。
+例如，有两个分支**master**和**dev**，当在**dev**上执行：
 ```sh
-$ git rebase dev
+$ git rebase master
 ```
-**master**历史树为成为一条直线，而若执行：
-```sh
-$ git merge dev
-```
-历史树会在**C3**分叉，然后会新增节点**C8**汇合。
-
-当`git rebase`遇到冲突时，解决冲突后，执行：
+**dev**历史树为成为一条直线。
+遇到冲突时解决后，执行：
 ```sh
 $ git add .
 $ git rebase --continue
 ```
-会继续应用余下的补丁。
+会继续应用余下的补丁。然后再切换到**master**分支执行`git merge dev`
+
+**注意：**`git rebase` 是一个比较危险的操作，它会重写历史，建议只在自己的分支上使用，不要在公共分支上使用它。
+
+::: tip
+使用规则：
+当本地 master 分支和远端不一致，需要切换到本地 master 分支，并`git pull`，然后切换到你自己的分支，执行`git rebase master`，如果有冲突则解决后重新`git add .`，并执行`git rebase --continue`，之后就可以申请合并到主分支了。
+:::

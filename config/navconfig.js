@@ -39,6 +39,7 @@ module.exports = [
     { 
         text: '其它', items: [    
             { text: 'CICD', link: '/others/cicd/'},
+            { text: 'SDK', link: '/others/sdk/' },
             { text: 'Issues', link: '/others/issues/' },
             { text: 'Utils', link: '/others/utils/' },
             { text: '面试宝典', link: '/others/interview/' },

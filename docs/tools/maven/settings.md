@@ -1,5 +1,5 @@
 ---
-titile: 附：完整的 Maven Settings 配置
+title: 附：完整的 Maven Settings
 ---
 
 ## Maven settings.xml

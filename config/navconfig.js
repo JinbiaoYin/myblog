@@ -13,7 +13,7 @@ module.exports = [
             { text: 'Quartz', link: '/backend/quartz/' },
             { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
             { text: 'Elastic Search', link: '/backend/elasticsearch/' },
-            { text: 'Spring Security Oauth', link: '/backend/spring-security-oauth2/' }
+            { text: 'Spring Security Oauth2', link: '/backend/spring-security-oauth2/' }
         ]
     },
     { 

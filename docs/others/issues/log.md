@@ -19,7 +19,7 @@ slf4j,log4j,logback都是一个人开发的。log4j2属于apache下的日志框�
 - SpringBoot2默认使用`slf4j`和`logback`。
 
 ## 如何使用slf4j
-开发时，不应该直接使用日志实现类，而时调用日志抽象层。目前大多选用`slf4j`作为日志门面，应当导入`slf4j-api.jar`。
+开发时，不应该直接使用日志实现类，而是调用日志抽象层。目前大多选用`slf4j`作为日志门面，应当导入`slf4j-api.jar`。
 
 - `logback`。导入`logback-classic.jar`和`logback-core.jar`。
 - `log4j`。由于`log4j`出现的较早，当时还未提出日志门面的概念，因此若要使用`log4j`和`slf4j`。除了需要导入`log4j.jar`，还需要导入一个适配层`slf4j-log412.jar`。

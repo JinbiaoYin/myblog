@@ -15,8 +15,8 @@ title: 日志循环依赖
 
 slf4j,log4j,logback都是一个人开发的。log4j2属于apache下的日志框架。
 其中：
-- Spring框架默认使用JCL(commons-logging)
-- SpringBoot2默认使用`slf4j`和`logback`。
+- `Spring`框架默认使用`JCL`(`commons-logging`)
+- `SpringBoot2`默认使用`slf4j`和`logback`。
 
 ## 如何使用slf4j
 开发时，不应该直接使用日志实现类，而是调用日志抽象层。目前大多选用`slf4j`作为日志门面，应当导入`slf4j-api.jar`。

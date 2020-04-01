@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{224:function(t,e,n){"use strict";n.r(e);var s=n(19),o=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("blockquote",[e("p",[this._v("可以将一个类的定义放在另一个类的定义内部，这就是内部类。")])])])}),[],!1,null,null,null);e.default=o.exports}}]);

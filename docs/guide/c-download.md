@@ -12,18 +12,19 @@ title: 下载
 - [JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 - Eclipse(百度云盘)
 - [Maven](https://maven.apache.org/download.cgi#)
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) `破解教程见参考资料`,(lombok/MybatisCodeHelper)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) `破解教程见参考资料`,(lombok/[MybatisCodeHelper](https://gitee.com/shuaibiao/software/blob/master/MybatisCodeHelperNew-2.7.8-191-193.zip))
 - [MySQL](https://downloads.mysql.com/archives/community/)
-- [Navicat Premium](https://www.navicat.com.cn/download/navicat-premium) `若最新版本无patch破解器，则百度网盘下载旧版本`
+- [Navicat Premium](https://www.navicat.com.cn/download/navicat-premium),[Navicat Premium破解版](https://gitee.com/shuaibiao/software/blob/master/navicat%2011.2%20%E9%99%84%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7.rar)
 - [Google Chrome](https://www.google.cn/intl/zh-CN/chrome/)
 - [Tim](https://tim.qq.com/)
 - [Git](https://git-scm.com/)
 - [SVN](https://tortoisesvn.net/downloads.html)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Postman](https://www.postman.com/downloads/)
-- ShadowsocksR-dotnet4.0(百度云盘)
+- [ShadowsocksR-dotnet4.0](https://gitee.com/shuaibiao/software/blob/master/ssr-win.7z)
 - [Typora](https://www.typora.io/#windows)
 - [uTools](https://www.u.tools/)
+- [IDM破解版](https://gitee.com/shuaibiao/software/blob/master/IDM%E5%AE%89%E8%A3%85%E7%89%88.7z)
 
 ::: tip
 `Typora`是个 Markdown 编辑文档。

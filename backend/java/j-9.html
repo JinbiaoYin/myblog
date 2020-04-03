@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第9章 接口 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea35a998.css" as="style"><link rel="preload" href="/assets/js/app.0dece99a.js" as="script"><link rel="preload" href="/assets/js/2.fa3ecc99.js" as="script"><link rel="preload" href="/assets/js/19.1e56cca9.js" as="script"><link rel="preload" href="/assets/js/3.10cb9937.js" as="script"><link rel="prefetch" href="/assets/js/10.040c8836.js"><link rel="prefetch" href="/assets/js/11.cebf0d48.js"><link rel="prefetch" href="/assets/js/12.d4aa6dbc.js"><link rel="prefetch" href="/assets/js/13.e569e059.js"><link rel="prefetch" href="/assets/js/14.908c3d3c.js"><link rel="prefetch" href="/assets/js/15.37f19c96.js"><link rel="prefetch" href="/assets/js/16.a21fcf56.js"><link rel="prefetch" href="/assets/js/17.51fbeafb.js"><link rel="prefetch" href="/assets/js/18.d658887b.js"><link rel="prefetch" href="/assets/js/20.53731642.js"><link rel="prefetch" href="/assets/js/21.dc405762.js"><link rel="prefetch" href="/assets/js/22.45f051be.js"><link rel="prefetch" href="/assets/js/23.e5c30f68.js"><link rel="prefetch" href="/assets/js/24.c507826d.js"><link rel="prefetch" href="/assets/js/25.346babad.js"><link rel="prefetch" href="/assets/js/26.b1831437.js"><link rel="prefetch" href="/assets/js/27.5b0755e0.js"><link rel="prefetch" href="/assets/js/28.6ab6104d.js"><link rel="prefetch" href="/assets/js/29.2d629bca.js"><link rel="prefetch" href="/assets/js/30.386853d4.js"><link rel="prefetch" href="/assets/js/31.31df8b62.js"><link rel="prefetch" href="/assets/js/32.325f8cec.js"><link rel="prefetch" href="/assets/js/33.33b31549.js"><link rel="prefetch" href="/assets/js/34.6f2efc1c.js"><link rel="prefetch" href="/assets/js/35.8e33f4dd.js"><link rel="prefetch" href="/assets/js/36.5b00620d.js"><link rel="prefetch" href="/assets/js/37.140f3a2d.js"><link rel="prefetch" href="/assets/js/38.6304b705.js"><link rel="prefetch" href="/assets/js/39.45fed822.js"><link rel="prefetch" href="/assets/js/4.b0232f6a.js"><link rel="prefetch" href="/assets/js/40.c0bfb7ab.js"><link rel="prefetch" href="/assets/js/41.e98b2498.js"><link rel="prefetch" href="/assets/js/42.6626c42a.js"><link rel="prefetch" href="/assets/js/43.0a2ba9b9.js"><link rel="prefetch" href="/assets/js/44.37187e8a.js"><link rel="prefetch" href="/assets/js/45.4c65a674.js"><link rel="prefetch" href="/assets/js/46.ba9a2813.js"><link rel="prefetch" href="/assets/js/47.53714e59.js"><link rel="prefetch" href="/assets/js/48.9111877a.js"><link rel="prefetch" href="/assets/js/49.725ee182.js"><link rel="prefetch" href="/assets/js/5.7c40eeda.js"><link rel="prefetch" href="/assets/js/50.ff6f7fad.js"><link rel="prefetch" href="/assets/js/51.9da24726.js"><link rel="prefetch" href="/assets/js/52.791eb14f.js"><link rel="prefetch" href="/assets/js/53.5a5b3912.js"><link rel="prefetch" href="/assets/js/54.058d0ebe.js"><link rel="prefetch" href="/assets/js/55.c4f701bd.js"><link rel="prefetch" href="/assets/js/56.fd8b2b3f.js"><link rel="prefetch" href="/assets/js/57.a81657ed.js"><link rel="prefetch" href="/assets/js/58.b275d1f0.js"><link rel="prefetch" href="/assets/js/59.686b4e18.js"><link rel="prefetch" href="/assets/js/6.5d062d06.js"><link rel="prefetch" href="/assets/js/60.e07d569b.js"><link rel="prefetch" href="/assets/js/61.8a989d76.js"><link rel="prefetch" href="/assets/js/62.5e86eb72.js"><link rel="prefetch" href="/assets/js/63.79bbafa8.js"><link rel="prefetch" href="/assets/js/64.6c211180.js"><link rel="prefetch" href="/assets/js/65.bcf8d66f.js"><link rel="prefetch" href="/assets/js/66.cbb9bb01.js"><link rel="prefetch" href="/assets/js/67.fa8b2fec.js"><link rel="prefetch" href="/assets/js/68.684c3518.js"><link rel="prefetch" href="/assets/js/69.f414c0c6.js"><link rel="prefetch" href="/assets/js/7.8a1412d1.js"><link rel="prefetch" href="/assets/js/70.0b42a938.js"><link rel="prefetch" href="/assets/js/71.11b25167.js"><link rel="prefetch" href="/assets/js/72.98259e06.js"><link rel="prefetch" href="/assets/js/73.c635bbd5.js"><link rel="prefetch" href="/assets/js/74.21dc9881.js"><link rel="prefetch" href="/assets/js/75.3a212f74.js"><link rel="prefetch" href="/assets/js/76.e18c7b59.js"><link rel="prefetch" href="/assets/js/8.5ac3c43c.js"><link rel="prefetch" href="/assets/js/9.5da3952c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea35a998.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mybatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/backend/quartz/" class="nav-link">
+  Quartz
+</a></li><li class="dropdown-item"><!----> <a href="/backend/rabbitmq/" class="nav-link">
+  RabbitMQ
+</a></li><li class="dropdown-item"><!----> <a href="/backend/elasticsearch/" class="nav-link">
+  Elastic Search
+</a></li><li class="dropdown-item"><!----> <a href="/backend/spring-security-oauth2/" class="nav-link">
+  Spring Security Oauth2
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JAVA</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/java/" class="sidebar-link">代码规范</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Java 编程思想</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/java/a-1.html" class="sidebar-link">第1章 对象导论</a></li><li><a href="/backend/java/b-2.html" class="sidebar-link">第2章 一切都是对象</a></li><li><a href="/backend/java/c-3.html" class="sidebar-link">第3章 操作符</a></li><li><a href="/backend/java/d-4.html" class="sidebar-link">第4章 控制执行流程</a></li><li><a href="/backend/java/e-5.html" class="sidebar-link">第5章 初始化与清理</a></li><li><a href="/backend/java/f-6.html" class="sidebar-link">第6章 访问权限控制</a></li><li><a href="/backend/java/h-7.html" class="sidebar-link">第7章 复用类</a></li><li><a href="/backend/java/i-8.html" class="sidebar-link">第8章 多态</a></li><li><a href="/backend/java/j-9.html" class="active sidebar-link">第9章 接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-1-抽象类和抽象方法" class="sidebar-link">9.1 抽象类和抽象方法</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-2-接口" class="sidebar-link">9.2 接口</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-3-完全解耦" class="sidebar-link">9.3 完全解耦</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-4-java的多重继承" class="sidebar-link">9.4 Java的多重继承</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-5-通过继承来扩展接口" class="sidebar-link">9.5 通过继承来扩展接口</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-6-适配接口" class="sidebar-link">9.6 适配接口</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-7-接口中的域" class="sidebar-link">9.7 接口中的域</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-8-嵌套接口" class="sidebar-link">9.8 嵌套接口</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-9-接口与工厂" class="sidebar-link">9.9 接口与工厂</a></li><li class="sidebar-sub-header"><a href="/backend/java/j-9.html#_9-10-总结" class="sidebar-link">9.10 总结</a></li></ul></li><li><a href="/backend/java/k-10.html" class="sidebar-link">第10章 内部类</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>接口和内部类为我们提供了一种将接口与实现分离的更加结构化的方法。</p></blockquote> <p>抽象类是普通的类与接口之间的一种中庸之道。构建某些未实现方法的类时，你的第一想法可能是创建接口。抽象类仍旧是用于此目的的一种重要而必须的工具。因为你不可能总是使用纯接口。</p> <h2 id="_9-1-抽象类和抽象方法"><a href="#_9-1-抽象类和抽象方法" class="header-anchor">#</a> 9.1 抽象类和抽象方法</h2> <p>Java中提供一个叫做<strong>抽象方法</strong>的机制，它仅有方法声明，没有方法体。例如:</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>包含<strong>抽象方法</strong>的类叫<strong>抽象类</strong>，它也必须用<code>abstract</code>修饰。如果一个类包含一个或多个抽象方法，该类就必须限定为抽象的。</p> <p>如果一个类是抽象类，那么无法为它创建对象。如果从一个抽象类集成，并想创建该新类的对象，那么必须实现所有的抽象方法。如果不这么做，那么导出类也是抽象类。</p> <h2 id="_9-2-接口"><a href="#_9-2-接口" class="header-anchor">#</a> 9.2 接口</h2> <p><code>interface</code>关键字产生一个完全抽象类，它没有提供任何具体实现。</p> <p>接口被用来建立类与类之间的<strong>协议</strong>。</p> <p>接口的域隐式的是<code>static</code>和<code>final</code>的，方法隐式的是<code>public</code>的。</p> <h2 id="_9-3-完全解耦"><a href="#_9-3-完全解耦" class="header-anchor">#</a> 9.3 完全解耦</h2> <p><strong>策略</strong>设计模式，根据不同的参数对象而具有不同的行为。</p> <p>复用代码的第一种方式是客户端程序员遵循接口来编写他们自己的类。</p> <p><strong>适配器</strong>设计模式，适配器中的代码将接受你所拥有的接口，并产生你所需要的接口。</p> <p>将接口从具体实现中解耦使得接口可以应用于多种不同的具体实现，因此代码也就更具可复用性。</p> <h2 id="_9-4-java的多重继承"><a href="#_9-4-java的多重继承" class="header-anchor">#</a> 9.4 Java的多重继承</h2> <p>接口不仅仅只是一种更纯粹形式的抽象类。它没有任何与接口相关的存储。</p> <p>类可以单继承，多实现。</p> <p>使用接口的核心原因：</p> <ol><li>为了能够向上转型为多个基类型</li> <li>与使用抽象类的原因相同：防止客户端程序员创建该类的对象。</li></ol> <h2 id="_9-5-通过继承来扩展接口"><a href="#_9-5-通过继承来扩展接口" class="header-anchor">#</a> 9.5 通过继承来扩展接口</h2> <p>接口可以通过<code>extends</code>来扩展组合成新的接口。一般情况下，只可以将<code>extends</code>用于单一类，但是在接口上却可以用来扩展多个接口。</p> <h3 id="_9-5-1-组合接口时的名字冲突"><a href="#_9-5-1-组合接口时的名字冲突" class="header-anchor">#</a> 9.5.1 组合接口时的名字冲突</h3> <p>在实现接口时，返回类型不一致不会成功实现。</p> <h2 id="_9-6-适配接口"><a href="#_9-6-适配接口" class="header-anchor">#</a> 9.6 适配接口</h2> <p>一个接口可以有多个实现。</p> <h2 id="_9-7-接口中的域"><a href="#_9-7-接口中的域" class="header-anchor">#</a> 9.7 接口中的域</h2> <p>因为接口中的域自动是<code>static</code>和<code>final</code>，所以接口就称为了很便捷的创建常量租的工具。</p> <p>但是由于Java SE5后，增加了<code>enum</code>关键字，用接口来创建常量已经没什么意义。</p> <h3 id="_9-7-1-初始化接口中的域"><a href="#_9-7-1-初始化接口中的域" class="header-anchor">#</a> 9.7.1 初始化接口中的域</h3> <p>接口中定义的域不能为空，可以被非常量表达式初始化。</p> <p>域不是接口的一部分，他们的值被存储在该接口的静态存储区域内。</p> <h2 id="_9-8-嵌套接口"><a href="#_9-8-嵌套接口" class="header-anchor">#</a> 9.8 嵌套接口</h2> <p>接口可以嵌套在类或其它接口中。</p> <h2 id="_9-9-接口与工厂"><a href="#_9-9-接口与工厂" class="header-anchor">#</a> 9.9 接口与工厂</h2> <p>生成遵循某个接口的对象的典型方式就是<strong>工厂方法</strong>设计模式。</p> <p>这与直接调用构造器不同，我们在工厂对象上调用的是创建方法，而该工厂对象将生成接口的某个实现的对象。</p> <p>理论上，通过这种方式，我们的代码将完全与接口的实现分离，这就使得我们可以透明地将某个实现替换为另一个实现。</p> <h2 id="_9-10-总结"><a href="#_9-10-总结" class="header-anchor">#</a> 9.10 总结</h2> <p>任何的抽象性都应该是应真正的需求而产生的。当必须时，你应该重构接口而不是到处添加额外级别的间接性，并由此带来的额外的复杂性。</p> <p>恰当的原则应该是优先选择类而不是接口。从类开始，如果接口越来越必须，那么就进行重构，采用接口，而不是一开始就总是选择接口。</p> <p>接口是一种重要的工具，但是它们容易被滥用。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-04-03 00:40:46</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/java/i-8.html" class="prev">
+        第8章 多态
+      </a></span> <span class="next"><a href="/backend/java/k-10.html">
+        第10章 内部类
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.0dece99a.js" defer></script><script src="/assets/js/2.fa3ecc99.js" defer></script><script src="/assets/js/19.1e56cca9.js" defer></script><script src="/assets/js/3.10cb9937.js" defer></script>
+  </body>
+</html>

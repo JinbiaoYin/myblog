@@ -25,6 +25,8 @@ title: 下载
 - [Typora](https://www.typora.io/#windows)
 - [uTools](https://www.u.tools/)
 - [IDM破解版](https://gitee.com/shuaibiao/software/blob/master/IDM%E5%AE%89%E8%A3%85%E7%89%88.7z)
+- [7-zip](https://www.7-zip.org/)
+- [xmp](https://gitee.com/shuaibiao/software/blob/master/XMP.zip)
 
 ::: tip
 `Typora`是个 Markdown 编辑文档。

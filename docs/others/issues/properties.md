@@ -8,8 +8,8 @@ title: SpringBoot 自定义 Properties
 
 1. Resource 目录下自定义配置文件 secret/oss.properties
 ```properties
-oss.secret.accessKeyId=secret
-oss.secret.accessKeySecret=secret
+oss.secret.accessKeyId=
+oss.secret.accessKeySecret=
 ```
 
 2. 新建 `OSSProperties.java`
@@ -31,7 +31,8 @@ public class OSSProperties {
 }
 ```
 
-3. 使用时，`@Value("")` 来注入
+3. 使用时，`@Value("")` 来直接注入属性，或者使用`@Autowired`来注入`OSSProperties`。
+例如：
 ```java
 @Value("${oss.secret.accessKeyId}")
 private String accessKeyId;
@@ -39,11 +40,12 @@ private String accessKeyId;
 @Value("${oss.secret.accessKeySecret}")
 private String accessKeySecret;
 ```
+或：
 
-::: warning
-`oss.properties`的前缀`oss.secret`不能与`application.yml`中的重名。
-如果`oss.properties`中有`oss.secret`,`application.yml`中也有`oss.secret`,将会报错。
-:::
+```java
+@Autowired
+private OSSProperties ossProperties;
+```
 
 4. 在 `.gitignore` 中忽略 secret 文件夹
 ```

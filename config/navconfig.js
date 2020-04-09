@@ -43,6 +43,7 @@ module.exports = [
             { text: 'SDK', link: '/others/sdk/' },
             { text: 'Issues', link: '/others/issues/' },
             { text: 'Utils', link: '/others/utils/' },
+            { text: '工作记录', link: '/others/work/' },
             { text: '面试宝典', link: '/others/interview/' },
         ]
     }

@@ -2,7 +2,7 @@
 title: 搭建 Maven Nexus 私服
 ---
 
-## 通过docker-compose安装nexus3  
+## 安装
 
 进入Docker hub上拉取sonatype/nexus3
 
@@ -49,7 +49,7 @@ chmod 777 data/
 :::
 
   
-## 配置代理仓库
+## 配置使用
 
 配置代理仓库后，项目可从私服上下载依赖。
 
@@ -87,7 +87,7 @@ url 避免写错，在部署好的nexus服务上可以直接拷贝。
 :::
 
 
-## 使用nexus私服上传
+## 上传到私服
 在maven的 `setting.xml` 中配置 `servers` 节点，`nexus-releases` 为发行版仓库，`nexus-snapshots` 为快照版仓库，`id` 为Maven想要连接的id。
 ```xml
 <server>  
@@ -119,7 +119,7 @@ url 避免写错，在部署好的nexus服务上可以直接拷贝。
 ``` 
 
 
-## Snapshots 与 Releases 的区别
+## Snapshots 与 Releases 
 - nexus-releases: 用于发布 Release 版本  
 - nexus-snapshots: 用于发布 Snapshot 版本（快照版）  
 
@@ -128,7 +128,7 @@ SNAPSHOT 版本会自动加一个时间作为标识，如：1.0.0-SNAPSHOT 发�
 当使用mvn deploy时，会先在本地打包，然后上传到私服上。
 
 
-## 上传第三方 JAR 包
+## 上传本地 jar
 
 Nexus 3.0 不支持页面上传，可使用 maven 命令：  Dfile为本地要上传的jar包地址，Durl为要上传到私服的哪个仓库中。DrepositoryId为仓库的id
 如第三方JAR包：aliyun-sdk-oss-2.2.3.jar

@@ -1,5 +1,6 @@
 ---
-title: 使用 Swagger2 接口文档
+autoGroup-2: 框架
+title: swagger
 ---
 
 ## 手写文档存在的问题
@@ -8,7 +9,7 @@ title: 使用 Swagger2 接口文档
 - 不能直接在线测试接口，通常需要使用工具，比如：`Postman`
 - 接口文档太多，不好管理
 
-## 使用Swagger2解决问题
+## 使用Swagger2
 
 ### Maven
 增加 Swagger2 所需依赖，`pom.xml` 配置如下：
@@ -80,12 +81,10 @@ package top.yinjinbiao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication(scanBasePackages = "top.yinjinbiao")
-@EnableEurekaClient
 @EnableSwagger2
 @MapperScan(basePackages = {"top.yinjinbiao.common.mapper", "top.yinjinbiao.mapper"})
 public class ServiceAdminApplication {

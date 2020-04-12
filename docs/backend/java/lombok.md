@@ -1,5 +1,6 @@
 ---
-title: 如何使用 lombok
+autoGroup-2: 框架
+title: lombok
 ---
 
 ## 快速入门

@@ -13,8 +13,8 @@ Git 提供了一个叫做 git config 的工具，专门用来配置或读取相�
 ### 用户信息
 配置个人的用户名称和电子邮件地址：
 ```sh
-$ git config --global user.name "runoob"
-$ git config --global user.email test@runoob.com
+$ git config --global user.name "yinjinbiao"
+$ git config --global user.email "731509863@qq.com"
 ```
 ::: tip
 这里修改了 ~/.gitconfig 文件。如果使用了 --system ，那么更改的配置就是 Git 安装目录/etc/gitconfig 文件。如果要在特定的项目中使用，那么只要去掉选项即可。

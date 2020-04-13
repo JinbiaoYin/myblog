@@ -67,3 +67,4 @@ title: 下载
 1. [IntelliJ IDEA破解教程持续更新](https://www.algerfan.cn/articles/2019/03/06/1551868940012.html)
 2. [MySQL 安装教程](/database/mysql/install)
 3. [Maven Settings 配置私服](/tools/maven/config)
+4. [Git国内镜像](https://npm.taobao.org/mirrors/git-for-windows/);官网下载速度慢可用这个。

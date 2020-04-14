@@ -10,6 +10,9 @@ title: 智能化建筑集成系统
 `IIS`:智能化集成软件。
 
 - sw-iis 客户端。
+- sw-iis ngnix静态资源服务器
+- icms 服务器
+- stream-server 流媒体服务器
 
 ### sw-iis 客户端
 使用的竟然是 `Electronjs`，一个使用 `JavaScript`,`HTML`和`CSS`构建跨平台的桌面应用程序。我还以为用的是 `C#`。于是我把 [electronjs](https://www.electronjs.org/) 提供的 DEMO 下了下来，并运行了一下。结果如下：

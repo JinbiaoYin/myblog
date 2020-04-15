@@ -41,7 +41,10 @@ icms 发布端口为 8080
 
 ### stream-server
 
-stream-server 为流媒体服务器，发布的端口为 9028
+stream-server 为流媒体服务器，发布的端口为 9028。简单集成了 ffmpeg 用来推流到 stream-server ，使用 websocket 。
+
+## isql.jar
+好像是停车场系统的服务。
 
 
 ## 参考资料

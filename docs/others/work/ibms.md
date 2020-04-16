@@ -43,9 +43,15 @@ icms 发布端口为 8080
 
 stream-server 为流媒体服务器，发布的端口为 9028。简单集成了 ffmpeg 用来推流到 stream-server ，使用 websocket 。
 
+stream-server 是使用基于 node.js，使用ffmpeg 和 jsmpeg 做成的websocket服务器，使用go语言仅仅是用来跳转页面和查询摄像头配置，真正播放视频流主要是 ffmpeg 将 rtsp 视频流解析为 mpeg1video 推送给 stream-server 中的 websocket 接口。
+
+页面上由 websocket 协议请求 stream-server ，由 canvas 标签绘制一帧帧绘制视频。
+
+
 ## isql.jar
 好像是停车场系统的服务。
 
 
 ## 参考资料
 - [electronjs](https://www.electronjs.org/)
+- [html5播放rtsp方案](https://blog.csdn.net/u014535295/article/details/99303890?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2)

@@ -48,8 +48,8 @@ stream-server 是使用基于 node.js，使用ffmpeg 和 jsmpeg 做成的websock
 页面上由 websocket 协议请求 stream-server ，由 canvas 标签绘制一帧帧绘制视频。
 
 
-## isql.jar
-好像是停车场系统的服务。
+### isql.jar
+停车场系统的服务。其实只是帮我们运行了几个sql语句，返回json数据给我们。没有任何权限。
 
 
 ## 参考资料

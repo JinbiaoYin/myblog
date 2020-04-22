@@ -1,5 +1,6 @@
 ---
-title: Mybatis 中 jdbcType 的映射关系
+autoGroup-2: 框架
+title: mybatis
 ---
 
 ## jdbc Oracle MySQL 对应表

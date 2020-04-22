@@ -9,12 +9,8 @@ module.exports = [
     { 
         text: '后端', items: [
             { text: 'Java', link: '/backend/java/' },
-            { text: 'MyBatis', link: '/backend/mybatis/' },
-            { text: 'Quartz', link: '/backend/quartz/' },
-            { text: 'RabbitMQ', link: '/backend/rabbitmq/' },
-            { text: 'Elastic Search', link: '/backend/elasticsearch/' },
-            { text: 'Spring Security Oauth2', link: '/backend/spring-security-oauth2/' },
-            { text: '工作流引擎', link: '/backend/workflow/' }
+            { text: 'Go', link: '/backend/go/'},
+            { text: '计算机网络', link: '/backend/internet/'},
         ]
     },
     { 

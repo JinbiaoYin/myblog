@@ -278,12 +278,12 @@ StringBuilder sb = new StringBuilder();
 说明：`java.net.URLDecoder` 中的方法`decode(String encodeStr)`这个方法已经过时，应该使用双参数`decode(String source, String encode)`。接口提供方既然明确是过时接口，那么有义务同时提供新的接口；
 作为调用方来说，有义务去考证过时方法的新实现是什么。
 
-6. 【强制】`Object` 的 `equals` 方法容易抛空指针异常，应使用常量或确定有值的对象来调用 `equals`。
-正例：`"test".equals(object)`;
-反例：`object.equals("test")`;
+6. 【强制】`Object` 的 `equals` 方法容易抛空指针异常，应使用常量或确定有值的对象来调用 `equals`。  
+正例：`"test".equals(object)`;  
+反例：`object.equals("test")`;  
 说明：推荐使用 `java.util.Objects#equals`（JDK7 引入的工具类）。
 
-7. 【强制】所有整型包装类对象之间值的比较，全部使用 `equals` 方法比较。
+7. 【强制】所有整型包装类对象之间值的比较，全部使用 `equals` 方法比较。  
 说明：对于 `Integer var = ?` 在-128 至 127 之间的赋值，`Integer` 对象是在 `IntegerCache.cache` 产生，会复用已有对象，这个区间内的 `Integer` 值可以直接使用`==`进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑，推荐使用 `equals` 方法进行判断。 
 
 8. 【强制】任何货币金额，均以最小货币单位且整型类型来进行存储。
@@ -375,9 +375,9 @@ System.out.println(ary.length);
 ```java
 public Integer getData () {
 	if (condition) {
-	return this.data + 100;
+		return this.data + 100;
 	} else {
-	return this.data - 100;
+		return this.data - 100;
 	}
 }
 ```
@@ -388,15 +388,15 @@ public Integer getData () {
 ```java
 String str = "start";
 for (int i = 0; i < 100; i++) {
- str = str + "hello";
+ 	str = str + "hello";
 }
 ```
 
-23. 【推荐】`final` 可以声明类、成员变量、方法、以及本地变量，下列情况使用 `final` 关键字： 
-	1） 不允许被继承的类，如：String 类。
-	2） 不允许修改引用的域对象，如：POJO 类的域变量。
-	3） 不允许被覆写的方法，如：POJO 类的 setter 方法。
-	4） 不允许运行过程中重新赋值的局部变量。
+23. 【推荐】`final` 可以声明类、成员变量、方法、以及本地变量，下列情况使用 `final` 关键字：   
+	1） 不允许被继承的类，如：String 类。  
+	2） 不允许修改引用的域对象，如：POJO 类的域变量。  
+	3） 不允许被覆写的方法，如：POJO 类的 setter 方法。  
+	4） 不允许运行过程中重新赋值的局部变量。  
 	5） 避免上下文重复使用一个变量，使用 final 可以强制重新定义一个变量，方便更好地进行重构。
 
 24. 【推荐】慎用 `Object` 的 `clone` 方法来拷贝对象。  
@@ -430,10 +430,10 @@ for (int i = 0; i < 100; i++) {
 3. 【强制】获取当前毫秒数：`System.currentTimeMillis();` 而不是 `new Date().getTime()。`  
 说明：如果想获取更加精确的纳秒级时间值，使用 `System.nanoTime 的方式。`在 JDK8 中，针对统计时间等场景，推荐使用 Instant 类。
 
-4. 【强制】不允许在程序任何地方中使用：
+4. 【强制】不允许在程序任何地方中使用：  
 1）`java.sql.Date`    
 2）`java.sql.Time`   
-3）`java.sql.Timestamp`。
+3）`java.sql.Timestamp`。  
 说明：第 1 个不记录时间，`getHours()`抛出异常；第 2 个不记录日期，`getYear()`抛出异常；第 3 个在构造方法 `super((time/1000)*1000)`，fastTime 和 nanos 分开存储秒和纳秒信息。
 反例： `java.util.Date.after(Date)`进行时间比较时，当入参是 `java.sql.Timestamp` 时，会触发 JDK BUG(JDK9 已修复)，可能导致比较时的意外结果。
 
@@ -513,7 +513,7 @@ Map<String, Double> map = pairArrayList.stream().collect(
 Collectors.toMap(Pair::getKey, Pair::getValue, (v1, v2) -> v2));
 ```
 
-5. 【强制】`ArrayList` 的 subList 结果不可强转成 `ArrayList`，否则会抛出 `ClassCastException` 异 常：`java.util.RandomAccessSubList cannot be cast to java.util.ArrayList`。
+5. 【强制】`ArrayList` 的 subList 结果不可强转成 `ArrayList`，否则会抛出 `ClassCastException` 异 常：`java.util.RandomAccessSubList cannot be cast to java.util.ArrayList`。  
 说明：`subList` 返回的是 `ArrayList` 的内部类 `SubList`，并不是 `ArrayList` 而是 `ArrayList` 的一个视图，对于 `SubList` 子列表的所有操作最终会反映到原列表上。
 
 6. 【强制】使用 `Map` 的方法 `keySet()`/`values()`/`entrySet()`返回集合对象时，不可以对其进行添加元素操作，否则会抛出 `UnsupportedOperationException` 异常。
@@ -541,7 +541,7 @@ String[] array = list.toArray(new String[0]);
 10. 【强制】在使用 `Collection` 接口任何实现类的`addAll()`方法时，都要对输入的集合参数进行 NPE 判断。
 说明：在 `ArrayList#addAll` 方法的第一行代码即 `Object[] a = c.toArray();` 其中 c 为输入集合参数，如果为 null，则直接抛出异常。
 
-11. 【强制】使用工具类 `Arrays.asList()`把数组转换成集合时，不能使用其修改集合相关的方法，它的 `add`/`remove`/`clear` 方法会抛出 `UnsupportedOperationException` 异常。
+11. 【强制】使用工具类 `Arrays.asList()`把数组转换成集合时，不能使用其修改集合相关的方法，它的 `add`/`remove`/`clear` 方法会抛出 `UnsupportedOperationException` 异常。  
 说明：`asList` 的返回对象是一个 `Arrays` 内部类，并没有实现集合的修改方法。`Arrays.asList` 体现的是适配器模式，只是转换接口，后台的数据仍是数组。
 ```java
 String[] str = new String[] { "yang", "hao" };
@@ -551,7 +551,7 @@ List list = Arrays.asList(str);
 第二种情况：`str[0] = "changed";` 也会随之修改，反之亦然。 
 
 12. 【强制】泛型通配符`<? extends T>`来接收返回的数据，此写法的泛型集合不能使用 `add` 方法， 而`<? super T>`不能使用 `get` 方法，两者在接口调用赋值的场景中容易出错。  
-说明：扩展说一下 **PECS(Producer Extends Consumer Super)**原则：  
+说明：扩展说一下 PECS(Producer Extends Consumer Super) 原则：  
 第一、频繁往外读取内容的，适合用`<? extends T>`。  
 第二、经常往里插入的，适合用`<? super T>`
 
@@ -568,7 +568,7 @@ generics = notGenerics;
 String string = generics.get(0);
 ```
 
-14. 【强制】不要在 `foreach` 循环里进行元素的 `remove`/`add` 操作。`remove` 元素请使用 `Iterator` 方式，如果并发操作，需要对 `Iterator` 对象加锁。
+14. 【强制】不要在 `foreach` 循环里进行元素的 `remove`/`add` 操作。`remove` 元素请使用 `Iterator` 方式，如果并发操作，需要对 `Iterator` 对象加锁。  
 正例：
 ```java
 List<String> list = new ArrayList<>();
@@ -617,26 +617,28 @@ ArrayList<User> users = new ArrayList(10);
 ```
 
 17. 【推荐】集合初始化时，指定集合初始值大小。  
-说明：`HashMap` 使用 `HashMap(int initialCapacity)` 初始化，如果暂时无法确定集合大小，那么指定默认值（16）即可。
-正例：
+说明：`HashMap` 使用 `HashMap(int initialCapacity)` 初始化，如果暂时无法确定集合大小，那么指定默认值（16）即可。  
+正例：  
 `initialCapacity = (需要存储的元素个数 / 负载因子) + 1`。注意负载因子（即 loader factor）默认为 0.75，如果暂时无法确定初始值大小，请设置为 16（即默认值）。  
-反例：
+反例： 
 `HashMap` 需要放置 1024 个元素，由于没有设置容量初始大小，随着元素不断增加，容量 7 次被迫扩大，resize 需要重建 hash 表。当放置的集合元素个数达千万级别时，不断扩容会严重影响性能。
 
 18. 【推荐】使用 `entrySet` 遍历 `Map` 类集合 KV，而不是 `keySet` 方式进行遍历。
-说明：`keySet` 其实是遍历了 2 次，一次是转为 `Iterator` 对象，另一次是从 `hashMap` 中取出 key 所对应的value。而 `entrySet` 只是遍历了一次就把 key 和 value 都放到了 entry 中，效率更高。如果是 JDK8，使用`Map.forEach`方法。
-正例：
+说明：`keySet` 其实是遍历了 2 次，一次是转为 `Iterator` 对象，另一次是从 `hashMap` 中取出 key 所对应的value。而 `entrySet` 只是遍历了一次就把 key 和 value 都放到了 entry 中，效率更高。如果是JDK8，使用`Map.forEach`方法。  
+正例：  
 values()返回的是 V 值集合，是一个 list 集合对象；  
 keySet()返回的是 K 值集合，是一个 Set 集合对象；  
 entrySet()返回的是 K-V 值组合集合。
 
 19. 【推荐】高度注意 Map 类集合 K/V 能不能存储 null 值的情况，如下表格：
+
 | 集合类               | Key       | Value     | Super       | 说明              |
 |-------------------|-----------|-----------|-------------|-----------------|
 | Hashtable         | 不允许为 null | 不允许为 null | Dictionary  | 线程安全            |
 | ConcurrentHashMap | 不允许为 null | 不允许为 null | AbstractMap | 锁分段技术（JDK8:CAS） |
 | TreeMap           | 不允许为 null | 允许为 null  | AbstractMap | 线程不安全           |
 | HashMap           | 允许为 null  | 允许为 null  | AbstractMap | 线程不安全           |
+
 反例：由于 `HashMap` 的干扰，很多人认为 `ConcurrentHashMap` 是可以置入 `null` 值，而事实上，存储 `null` 值时会抛出 NPE 异常。
 
 20. 【参考】合理利用好集合的有序性(sort)和稳定性(order)，避免集合的无序性(unsort)和不稳定性(unorder)带来的负面影响。  
@@ -711,7 +713,7 @@ try {
 9. 【强制】在使用阻塞等待获取锁的方式中，必须在 `try` 代码块之外，并且在加锁方法与 `try` 代码块之间没有任何可能抛出异常的方法调用，避免加锁成功后，在 `finally` 中无法解锁。
 说明一：如果在 `lock` 方法与 `try` 代码块之间的方法调用抛出异常，那么无法解锁，造成其它线程无法成功获取锁。  
 说明二：如果 `lock` 方法在 `try` 代码块之内，可能由于其它方法抛出异常，导致在 `finally` 代码块中，`unlock` 对未加锁的对象解锁，它会调用 AQS 的 tryRelease 方法（取决于具体实现类），抛出`IllegalMonitorStateException` 异常。  
-说明三：在 `Lock` 对象的 `lock` 方法实现中可能抛出 `unchecked` 异常，产生的后果与说明二相同。  
+说明三：在 `Lock` 对象的 `lock` 方法实现中可能抛出 `unchecked` 异常，产生的后果与说明二相同。    
 正例：
 ```java
 Lock lock = new XxxLock();
@@ -882,7 +884,7 @@ public void findBoyfriend (Man man){
 ```
 
 8. 【推荐】除常用方法（如 getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。  
-说明：很多 if 语句内的逻辑表达式相当复杂，与、或、取反混合运算，甚至各种方法纵深调用，理解成本非常高。如果赋值一个非常好理解的布尔变量名字，则是件令人爽心悦目的事情。
+说明：很多 if 语句内的逻辑表达式相当复杂，与、或、取反混合运算，甚至各种方法纵深调用，理解成本非常高。如果赋值一个非常好理解的布尔变量名字，则是件令人爽心悦目的事情。  
 正例：
 ```java
 // 伪代码如下
@@ -931,7 +933,7 @@ public Lock getLock(boolean fair) {
 
 14. 【参考】下列情形，不需要进行参数校验：  
 1） 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查。  
-2） 底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底层才会暴露问题。一般 DAO 层与 Service 层都在同一个应用中，部署在同一台服务器中，所以 DAO 的参数校验，可以省略。
+2） 底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底层才会暴露问题。一般 DAO 层与 Service 层都在同一个应用中，部署在同一台服务器中，所以 DAO 的参数校验，可以省略。  
 3） 被声明成 `private` 只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数。  
 
 ## (九) 注释规约
@@ -942,7 +944,7 @@ public Lock getLock(boolean fair) {
 说明：对子类的实现要求，或者调用注意事项，请一并说明。
 
 3. 【强制】所有的类都必须添加创建者和创建日期。  
-说明：在设置模板时，注意 IDEA 的 @author 为`${USER}`，而 eclipse 的@author 为`${user}`，大小写有区别，而日期的设置统一为 yyyy/MM/dd 的格式。
+说明：在设置模板时，注意 IDEA 的 @author 为`${USER}`，而 eclipse 的@author 为`${user}`，大小写有区别，而日期的设置统一为 yyyy/MM/dd 的格式。  
  正例：
 ```java
  /**
@@ -963,16 +965,16 @@ public Lock getLock(boolean fair) {
 
 8. 【推荐】在类中删除未使用的任何字段和方法；在方法中删除未使用的任何参数声明与内部变量。  
 
-9. 【参考】谨慎注释掉代码。在上方详细说明，而不是简单地注释掉。如果无用，则删除。
-说明：代码被注释掉有两种可能性：  
+9. 【参考】谨慎注释掉代码。在上方详细说明，而不是简单地注释掉。如果无用，则删除。  
+说明：代码被注释掉有两种可能性：   
 1）后续会恢复此段代码逻辑。  
 2）永久不用。前者如果没有备注信息，难以知晓注释动机。后者建议直接删掉即可，假如需要查阅历史代码，登录代码仓库即可。	
 
-10. 【参考】对于注释的要求：
+10. 【参考】对于注释的要求：  
 第一、能够准确反映设计思想和代码逻辑；  
 第二、能够描述业务含义，使别的程序员能够迅速了解到代码背后的信息。完全没有注释的大段代码对于阅读者形同天书，注释是给自己看的，即使隔很长时间，也能清晰理解当时的思路；注释也是给继任者看的，使其能够快速接替自己的工作。
 
-11. 【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。
+11. 【参考】好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免出现注释的一个极端：过多过滥的注释，代码的逻辑一旦修改，修改注释是相当大的负担。  
 反例：
 ```java
 // put elephant into fridge 
@@ -980,7 +982,7 @@ put(elephant, fridge);
 ```
 方法名 put，加上两个有意义的变量名 elephant 和 fridge，已经说明了这是在干什么，语义清晰的代码不需要额外的注释。
 
-12. 【参考】特殊注释标记，请注明标记人与标记时间。注意及时处理这些标记，通过标记扫描，经常清理此类标记。线上故障有时候就是来源于这些标记处的代码。
+12. 【参考】特殊注释标记，请注明标记人与标记时间。注意及时处理这些标记，通过标记扫描，经常清理此类标记。线上故障有时候就是来源于这些标记处的代码。  
 1） 待办事宜（TODO）:（标记人，标记时间，[预计处理时间]）表示需要实现，但目前还未实现的功能。这实际上是一个 Javadoc 的标签，目前的 Javadoc 还没有实现，但已经被广泛使用。只能应用于类，接口和方法（因为它是一个 Javadoc 标签）。  
 2） 错误，不能工作（FIXME）:（标记人，标记时间，[预计处理时间]）在注释中用 FIXME 标记某代码是错误的，而且不能工作，需要及时纠正的情况。
 
@@ -989,7 +991,8 @@ put(elephant, fridge);
 1. 【强制】在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。  
 说明：不要在方法体内定义：`Pattern pattern = Pattern.compile(“规则”);`
 
-2. 【强制】避免用 Apache Beanutils 进行属性的 copy。说明：Apache BeanUtils 性能较差，可以使用其他方案比如 Spring BeanUtils, Cglib BeanCopier，注意均是浅拷贝。
+2. 【强制】避免用 Apache Beanutils 进行属性的 copy。  
+说明：Apache BeanUtils 性能较差，可以使用其他方案比如 Spring BeanUtils, Cglib BeanCopier，注意均是浅拷贝。
 
 3. 【强制】`velocity` 调用 POJO 类的属性时，直接使用属性名取值即可，模板引擎会自动按规范调用 POJO 的 getXxx()，如果是 `boolean` 基本数据类型变量（`boolean` 命名不需要加 is 前缀），会自动调用 isXxx()方法。  
 说明：注意如果是 `Boolean` 包装类对象，优先调用 getXxx()的方法。

@@ -58,7 +58,9 @@ stream-server 是使用基于 node.js，使用ffmpeg 和 jsmpeg 做成的websock
 停车场系统的服务。其实只是帮我们运行了几个sql语句，返回json数据给我们。没有任何权限。
 
 ### idps
-从opc查询数据的服务器。
+采用定时任务从opc不断查询数据，写入到icmsdb的point_base数据库中。icms页面中进行轮询设备状态，用不同图片展示不同设备的状态。
+
+采石中只有动力环境和广播系统。
 
 
 ## 参考资料

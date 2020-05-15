@@ -1,5 +1,5 @@
 ---
-autoGroup-1: 高性能 MySQL
+autoGroup-2: 高性能 MySQL
 title: 第1章 MySQL架构与历史
 ---
 

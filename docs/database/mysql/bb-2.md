@@ -1,5 +1,5 @@
 ---
-autoGroup-1: 高性能 MySQL
+autoGroup-2: 高性能 MySQL
 title: 第2章 MySQL 基准测试
 ---
 

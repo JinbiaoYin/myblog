@@ -1,5 +1,5 @@
 ---
-autoGroup-1: 高性能 MySQL
+autoGroup-2: 高性能 MySQL
 title: 第3章 服务器性能剖析
 ---
 

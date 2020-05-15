@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第3章 服务器性能剖析 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea35a998.css" as="style"><link rel="preload" href="/assets/js/app.0d4e1ded.js" as="script"><link rel="preload" href="/assets/js/2.fa3ecc99.js" as="script"><link rel="preload" href="/assets/js/40.5d640649.js" as="script"><link rel="preload" href="/assets/js/3.10cb9937.js" as="script"><link rel="prefetch" href="/assets/js/10.0f9c847a.js"><link rel="prefetch" href="/assets/js/11.8374216a.js"><link rel="prefetch" href="/assets/js/12.94078cac.js"><link rel="prefetch" href="/assets/js/13.58107504.js"><link rel="prefetch" href="/assets/js/14.6a9ff23a.js"><link rel="prefetch" href="/assets/js/15.e6716263.js"><link rel="prefetch" href="/assets/js/16.166690eb.js"><link rel="prefetch" href="/assets/js/17.065d163d.js"><link rel="prefetch" href="/assets/js/18.c001d191.js"><link rel="prefetch" href="/assets/js/19.48f58e56.js"><link rel="prefetch" href="/assets/js/20.6eb2b873.js"><link rel="prefetch" href="/assets/js/21.b4a230f8.js"><link rel="prefetch" href="/assets/js/22.7ceac6ef.js"><link rel="prefetch" href="/assets/js/23.820766ea.js"><link rel="prefetch" href="/assets/js/24.bc33463e.js"><link rel="prefetch" href="/assets/js/25.929c3fca.js"><link rel="prefetch" href="/assets/js/26.5fffa4f6.js"><link rel="prefetch" href="/assets/js/27.8312e26b.js"><link rel="prefetch" href="/assets/js/28.f516dc05.js"><link rel="prefetch" href="/assets/js/29.d7646f10.js"><link rel="prefetch" href="/assets/js/30.7f0f5659.js"><link rel="prefetch" href="/assets/js/31.bf3f95fd.js"><link rel="prefetch" href="/assets/js/32.21859856.js"><link rel="prefetch" href="/assets/js/33.df54f036.js"><link rel="prefetch" href="/assets/js/34.d32884b1.js"><link rel="prefetch" href="/assets/js/35.7fa8ce22.js"><link rel="prefetch" href="/assets/js/36.ff1e2d19.js"><link rel="prefetch" href="/assets/js/37.b352e0c1.js"><link rel="prefetch" href="/assets/js/38.68785ff8.js"><link rel="prefetch" href="/assets/js/39.e37f6594.js"><link rel="prefetch" href="/assets/js/4.051963ca.js"><link rel="prefetch" href="/assets/js/41.c1e075f0.js"><link rel="prefetch" href="/assets/js/42.4ee1816b.js"><link rel="prefetch" href="/assets/js/43.d6e07da6.js"><link rel="prefetch" href="/assets/js/44.ef53cf9a.js"><link rel="prefetch" href="/assets/js/45.cefe6320.js"><link rel="prefetch" href="/assets/js/46.74d4ff2c.js"><link rel="prefetch" href="/assets/js/47.c832d803.js"><link rel="prefetch" href="/assets/js/48.cf49ebb3.js"><link rel="prefetch" href="/assets/js/49.9deee268.js"><link rel="prefetch" href="/assets/js/5.7c40eeda.js"><link rel="prefetch" href="/assets/js/50.d559a151.js"><link rel="prefetch" href="/assets/js/51.abd73547.js"><link rel="prefetch" href="/assets/js/52.9bc62628.js"><link rel="prefetch" href="/assets/js/53.e3100438.js"><link rel="prefetch" href="/assets/js/54.4b3d75c1.js"><link rel="prefetch" href="/assets/js/55.900813eb.js"><link rel="prefetch" href="/assets/js/56.c20e4866.js"><link rel="prefetch" href="/assets/js/57.977f9a68.js"><link rel="prefetch" href="/assets/js/58.19b86401.js"><link rel="prefetch" href="/assets/js/59.853238eb.js"><link rel="prefetch" href="/assets/js/6.5d062d06.js"><link rel="prefetch" href="/assets/js/60.28901a22.js"><link rel="prefetch" href="/assets/js/61.96fda80f.js"><link rel="prefetch" href="/assets/js/62.3347723a.js"><link rel="prefetch" href="/assets/js/63.954ba144.js"><link rel="prefetch" href="/assets/js/64.e0e6b06a.js"><link rel="prefetch" href="/assets/js/65.e6ecc42e.js"><link rel="prefetch" href="/assets/js/66.30dd9563.js"><link rel="prefetch" href="/assets/js/67.437e497d.js"><link rel="prefetch" href="/assets/js/68.d013dae2.js"><link rel="prefetch" href="/assets/js/69.1924d084.js"><link rel="prefetch" href="/assets/js/7.56a23a8d.js"><link rel="prefetch" href="/assets/js/70.2bbe024e.js"><link rel="prefetch" href="/assets/js/71.ddb66069.js"><link rel="prefetch" href="/assets/js/72.846a72e2.js"><link rel="prefetch" href="/assets/js/73.8b4691fa.js"><link rel="prefetch" href="/assets/js/74.84216c0c.js"><link rel="prefetch" href="/assets/js/75.5af2cc4b.js"><link rel="prefetch" href="/assets/js/76.9a32bb01.js"><link rel="prefetch" href="/assets/js/77.c40cc487.js"><link rel="prefetch" href="/assets/js/78.14ee2300.js"><link rel="prefetch" href="/assets/js/79.468a3753.js"><link rel="prefetch" href="/assets/js/8.bca3974e.js"><link rel="prefetch" href="/assets/js/80.2f5f4350.js"><link rel="prefetch" href="/assets/js/81.94902926.js"><link rel="prefetch" href="/assets/js/82.fcc16b1b.js"><link rel="prefetch" href="/assets/js/83.1b74d889.js"><link rel="prefetch" href="/assets/js/84.70b64025.js"><link rel="prefetch" href="/assets/js/85.9a4600ed.js"><link rel="prefetch" href="/assets/js/86.118f3adf.js"><link rel="prefetch" href="/assets/js/87.cdb25364.js"><link rel="prefetch" href="/assets/js/88.a15205f6.js"><link rel="prefetch" href="/assets/js/89.8f22a96b.js"><link rel="prefetch" href="/assets/js/9.8b949133.js"><link rel="prefetch" href="/assets/js/90.fc849176.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea35a998.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link router-link-active">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/issues/" class="nav-link">
+  Issues
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>MYSQL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/mysql/" class="sidebar-link">首页</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>MySQL必知必会</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/mysql/a.html" class="sidebar-link">目录</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>高性能 MySQL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/mysql/b.html" class="sidebar-link">译者序</a></li><li><a href="/database/mysql/ba-1.html" class="sidebar-link">第1章 MySQL架构与历史</a></li><li><a href="/database/mysql/bb-2.html" class="sidebar-link">第2章 MySQL 基准测试</a></li><li><a href="/database/mysql/bc-3.html" class="active sidebar-link">第3章 服务器性能剖析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mysql/bc-3.html#_3-1-性能优化简介" class="sidebar-link">3.1 性能优化简介</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_3-1-性能优化简介"><a href="#_3-1-性能优化简介" class="header-anchor">#</a> 3.1 性能优化简介</h2> <p>我们将性能定义为完成某件任务所需要的时间度量，换句话说，性能即响应时间。</p> <h3 id="_3-1-1-通过性能剖析进行优化"><a href="#_3-1-1-通过性能剖析进行优化" class="header-anchor">#</a> 3.1.1 通过性能剖析进行优化</h3> <p>性能剖析是测量和分析时间花费在哪里的主要方法。一般有两个步骤：测量任务所花费的时间；然后对结果进行统计和排序，将重要的任务排到前面。</p> <h3 id="_3-1-2-理解性能剖析"><a href="#_3-1-2-理解性能剖析" class="header-anchor">#</a> 3.1.2 理解性能剖析</h3> <p>一款好的性能剖析工具会显示可能的“丢失的时间”。丢失的时间指的是任务的总时间和实际测量到的时间之间的差。例如，如果处理器的CPU时间是10秒，而剖析到的任务总时间是9.7秒，那么就有300毫秒的丢失时间。这可能是有些任务没有测量到，也可能是由于测量的误差和精度问题的缘故。如果工具发现了这类问题，则要引起重视，因为有可能错过了某些重要的事情。即使性能剖析没有发现丢失时间，也需要注意考虑这类问题存在的可能性，这样才不会错过重要的信息。</p> <p>性能剖析无法显示所有响应时间的分布。只相信平均值是非常危险的。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-05-15 09:32:39</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/database/mysql/bb-2.html" class="prev">
+        第2章 MySQL 基准测试
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.0d4e1ded.js" defer></script><script src="/assets/js/2.fa3ecc99.js" defer></script><script src="/assets/js/40.5d640649.js" defer></script><script src="/assets/js/3.10cb9937.js" defer></script>
+  </body>
+</html>

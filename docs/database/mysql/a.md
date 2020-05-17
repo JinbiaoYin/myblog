@@ -228,3 +228,26 @@ AND orderitems.order_num = orders.order_num;
 看上去是大多视图都不允许更新，这是因为视图主要用于数据检索。
 
 ## 第23章 使用存储过程
+### 23.1 什么是存储过程
+使用的大多数SQL语句都是针对一个或多个表的单条语句。并非所有操作都这么简单，经常会有一个完整的操作需要多条语句才能完成。
+
+存储过程简单来说，就是为以后的使用而保存的一条或多条MySQL语句的集合。可将其视为批文件，虽然它们的作用不仅限于批处理。
+
+用存储过程有3个主要的好处，即简单、安全、高性能。
+
+### 23.2 使用存储过程
+#### 23.3.1 执行存储过程
+```sql
+CALL test_procedure(@pricelow,@pricehigh,@priceaverage);
+```
+这句sql的作用是，调用并执行存储过程 test_produce,并传了3个参数。
+
+#### 23.3.2 创建存储过程
+```sql
+CREATE PROCEDURE test_procedure()
+BEGIN
+	SELECT Avg(prod_price) AS priceaverge
+	FROM products
+END;
+```
+这句语句的意思是，创建一个名为 test_procedure 的存储过程，`BEGIN`和`END`用来限定存储过程体。这个存储过程没有参数，但后跟的()仍然需要。

@@ -235,6 +235,8 @@ AND orderitems.order_num = orders.order_num;
 
 用存储过程有3个主要的好处，即简单、安全、高性能。
 
+存储过程实际上是一种函数。
+
 ### 23.2 使用存储过程
 #### 23.3.1 执行存储过程
 ```sql
@@ -251,3 +253,244 @@ BEGIN
 END;
 ```
 这句语句的意思是，创建一个名为 test_procedure 的存储过程，`BEGIN`和`END`用来限定存储过程体。这个存储过程没有参数，但后跟的()仍然需要。
+
+:::tip  
+mysql命令行客户机的分隔符为;。如果直接在存储过程体中使用;,会被判断为语句结束，而不是过程体的分隔符。为了在使用存储过程时，将过程体和整个存储过程的分隔符区别开，解决方法是临时更改命令行实用程序的语句分隔符。
+
+除\符号外，任何字符都可以用作语句分隔符。
+
+如果你使用的是mysql命令行实用程序，在使用存储过程时，注意临时更改语句分隔符。
+:::
+
+例如，在mysql命令行实用程序中，将语句分隔符临时更改为//。
+```sql
+DELIMITER //
+CREATE PROCEDURE test_procedure()
+BEGIN
+	SELECT Avg(prod_price) AS priceaverage
+	FROM products;
+END //
+DELIMITER;
+```
+
+#### 23.3.3 删除存储过程
+```sql
+DROP PROCEDURE test_procedure;
+```
+请注意没有使用后面的()。仅在创建时和调用时需要()。
+
+如果存储过程不存在，将产生一个错误。想避免这个错误可使用`DROP PROCEDURE IF EXISTS`
+
+#### 23.3.4 带参数的存储过程
+```sql
+CREATE PROCEDURE test_procedure(OUT pl BIGINT,OUT ph BIGINT,OUT pa BIGINT)
+BEGIN
+	SELECT MIN(user_id) INTO pl
+  FROM sys_user;
+	SELECT MAX(user_id) INTO ph
+  FROM sys_user;
+	SELECT AVG(user_id) INTO pa
+  FROM sys_user;
+END
+```
+此存储过程接受3个参数，`OUT`指出相应的参数用来从存储过程传出一个值。MySQL支持`IN`,`OUT`,`INOUT`类型的参数。`INTO`相当于赋值操作。
+
+**调用带参数的存储过程：**
+```sql
+CALL test_procedure(@a,@b,@c);
+SELECT @a,@b,@c
+```
+MySQL使用`@`来表示变量，上述调用 test_procedure存储过程，将返回参数临时存储在三个变量中，并不直接显示。需要再次使用`SELECT`查询结果。
+
+**使用IN和OUT**
+```sql
+CREATE PROCEDURE test_procedure(IN userid BIGINT,OUT telphone VARCHAR(11))
+BEGIN
+	SELECT avg(tel) INTO telphone
+	FROM sys_user
+	WHERE user_id = userid;
+END
+```
+调用
+```sql
+CALL test_procedure(9996993128955904,@tel);
+SELECT @tel;
+```
+
+### 23.3.5 建立智能存储过程
+上述存储过程中，只封装了简单的`SELECT`语句，这些存储过程直接用被封装的语句就可以完成。使用存储过程反而是过度设计了。
+
+只有在存储过程内包含业务规则和智能处理时，它们的威力才真正显现出来。
+
+```sql
+CREATE PROCEDURE ordertotal(IN onum INT,IN taxtable BOOLEAN,OUT ototal DECIMAL(8,2))
+BEGIN
+	DECLARE total DECIMAL(8,2);
+	DECLARE taxrate INT DEFAULT 6;
+	SELECT Sum(item_price*quantity)
+	FROM orderitems
+	WHERE order_num = onumber
+	INTO total;
+	IF taxtable THEN
+		SELECT total+(total/100*taxrate) INTO total;
+	END IF;
+	SELECT total INTO ototal;
+END
+```
+使用`DECLARE`可以在存储过程中声明变量，使用`IF ... THEN ... END IF;`判断条件。
+
+#### 23.3.6 检查存储过程
+使用`SHOW CREATE PROCEDURE`查看存储过程定义。
+```sql
+SHOW CREATE PROCEDURE test_procedure
+```
+
+## 第24章 使用游标
+### 24.1 什么是游标
+MySQL检索操作返回一组称为结果集的行。这组返回的行都是与SQL语句相匹配的行（零行或多行）。使用简单的`SELECT`语句，例如，没有办法得到第一行、下一行或前10行，也不存在每次一行地处理所有行的简单方法（相对于成批地处理它们）。
+
+有时，需要在检索出来的行中前进或后退一行或多行。这就是使用游标的原因。游标（cursor）是一个存储在MySQL服务器上的数据库查询，它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。
+
+不像多数DBMS，MySQL游标只能用于存储过程（和函数）。
+
+### 24.2 如何使用游标
+```sql
+CREATE PROCEDURE test_procedure()
+BEGIN
+	DECLARE done BOOLEAN DEFAULT 0;
+	DECLARE o BIGINT;
+	DECLARE ordernumbers CURSOR
+	FOR
+	SELECT user_id from sys_user;
+	DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET done = 1;
+	OPEN ordernumbers;
+	REPEAT
+		FETCH ordernumbers INTO o;
+	UNTIL done END REPEAT;
+	CLOSE ordernumbers;
+END
+```
+:::tip
+使用`DECLARE ordernumbers CURSOR FOR ...`，为查询设置一个游标。`DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET done = 1;`是在条件出现时被执行的代码。这里，它指出当SQLSTATE '02000'出现时，SET done=1。SQLSTATE为02000代表无更多数据。
+:::
+
+## 第25章 使用触发器
+### 25.1 什么是触发器
+如果我们想要某些语句在事件发生时自动执行。这时候就要使用触发器。触发器是MySQL响应以下任意语句而自动执行的一条MySQL语句。
+- DELETE
+- INSERT
+- UPDATE
+其它MySQL语句不支持触发器。
+
+### 25.2 创建触发器
+触发器必须在每个表中唯一，而不是在每个数据库中唯一。数据库中的两个表可具有相同名字的触发器。但是最好使用唯一的触发器名。
+```sql
+CREATE TRIGGER test_trigger AFTER INSERT ON sys_user
+FOR EACH ROW SELECT 'User added' INTO @a;
+```
+只有表才支持触发器，视图不支持。每个表最多支持6个触发器（每条INSERT、UPDATE和DELETE的之前和之后）。
+
+### 25.3 删除触发器
+```sql
+DROP TRIGGER test_trigger;
+```
+触发器不能更新或覆盖，只能删除重新创建。
+
+### 25.4 触发器实例
+**INSERT**
+```sql
+CREATE TRIGGER test_trigger AFTER INSERT ON sys_user
+FOR EACH ROW 
+BEGIN
+	SELECT NEW.user_id INTO @a;
+END
+```
+`INSERT`触发器内，可引用虚拟表`NEW`，访问被插入的行。
+```sql
+INSERT INTO `webframe`.`sys_user` (`user_id`, `loginname`, `username`, `password`) VALUES ('2', 'test', 'test', '638a0bd2e278d57416c5492042441920f46c20d312881c22');
+SELECT @a;
+```
+**----------------DELETE-----------------**
+```sql
+CREATE TRIGGER test_trigger AFTER DELETE ON sys_user
+FOR EACH ROW
+BEGIN
+	SELECT OLD.user_id INTO @a;
+END
+```
+`DELETE`触发器内，可引用虚拟表`OLD`，访问被删除的行。
+```sql
+DELETE from sys_user where user_id = 1;
+select @a;
+```
+
+**----------------UPDATE-----------------**
+```sql
+CREATE TRIGGER test_trigger BEFORE UPDATE ON sys_user
+FOR EACH ROW
+BEGIN
+	SET NEW.username = UPPER(NEW.username);
+END
+```
+在UPDATE触发器代码中，你可以引用一个名为OLD的虚拟表访问以前（UPDATE语句前）的值，引用一个名为NEW的虚拟表访问新更新的值；
+
+在BEFORE UPDATE触发器中，NEW中的值可能也被更新（允许更改将要用于UPDATE语句中的值）；
+
+每次更新一个行时，NEW.username中的值（将用来更新表行的值）都用Upper(NEW.username)替换。
+
+### 25.4.4 关于触发器的进一步介绍
+使用触发器，把更改（如果需要，甚至还有之前和之后的状态）记录到另一个表非常容易。可以用来做日志。
+
+MySQL触发器中不支持CALL语句。这表示不能从触发器内调用存储过程。所需的存储过程代码需要复制到触发器内。
+
+
+## 第26章 管理事务处理
+事务处理用来管理`INSERT`、`UPDATE`和`DELETE`语句。你不能回退`SELECT`语句。（这样做也没有什么意义。）你不能回退`CREATE`或`DROP`操作。事务处理块中可以使用这两条语句，但如果你执行回退，它们不会被撤销。
+
+### 26.2 控制事务处理
+#### 26.2.3 使用保留点
+有时候想部分回滚事务，这时候就要使用保留点。
+```sql
+SAVEPOINT point1;
+ROLLBACK TO point1;
+```
+使用`SAVEPOINT`在语句中设置一个保留点，在回滚时设置回滚至保留点。
+
+## 第28章 安全管理
+### 28.2 管理用户
+```sql
+USE mysql;
+SELECT user FROM user;
+```
+
+#### 28.2.1 创建用户账号
+```sql
+CREATE USER test IDENTITY BY '123456';
+```
+重命名用户名
+```sql
+RENAME USER test TO test1;
+```
+
+#### 28.2.2 删除用户
+```sql
+DROP USER test1;
+```
+
+#### 28.2.3 设置访问权限
+新创建的用户账号没有访问权限。它们能登录MySQL，但不能看到数据，不能执行任何数据库操作。
+```sql
+SHOW GRANTS FOR test;
+```
+
+MySQL的权限用用户名和主机名结合定义。如果不指定主机名，则使用默认的主机名%
+
+授权：
+```sql
+GRANT SELECT ON webframe.* TO test;
+```
+
+撤销权限，被撤销的访问权限必须存在，否则会出错。
+```sql
+REVOKE SELECT ON webframe.* FROM test;
+```

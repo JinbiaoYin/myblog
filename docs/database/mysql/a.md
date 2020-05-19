@@ -494,3 +494,22 @@ GRANT SELECT ON webframe.* TO test;
 ```sql
 REVOKE SELECT ON webframe.* FROM test;
 ```
+
+查看用户权限
+```sql
+SHOW GRANTS FOR test;
+```
+
+权限对应表
+<img :src="$withBase('/database/mysql/mysql_grant.jpg')">
+
+
+#### 28.2.4 更改口令
+```sql
+SET PASSWORD FOR test = Password('123456');
+```
+
+不指定用户名时，默认更新当前登录用户口令。
+```sql
+SET PASSWORD = Password('123456');
+```

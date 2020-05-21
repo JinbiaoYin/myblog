@@ -10,6 +10,14 @@ module.exports = {
         repo: 'JinbiaoYin/myblog',
         docsDir: 'docs',
         lastUpdated: '上次更新', // string | boolean
-        nav: nav
+        nav: nav,
+        algolia: {
+          appId:'B86WCY3LIP',
+          apiKey:'89af971cd4f329670bdab499367c2c24',
+          indexName:'blog',
+          algoliaOptions: {
+            facetFilters: ""
+          }
+        }
       }
 }

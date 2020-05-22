@@ -1,8 +1,6 @@
 ---
-title: 注解
+title: 注解的继承
 ---
-
-## 注解的继承
 
 只有被 `@Inherited` 标识的自定义注解 `@MyAnnotation`，才能被继承。
 

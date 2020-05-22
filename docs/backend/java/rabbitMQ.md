@@ -1,5 +1,4 @@
 ---
-autoGroup-2: 框架
 title: RabbitMQ
 ---
 

@@ -1,5 +1,4 @@
 ---
-autoGroup-1: MySQL必知必会
 title: 目录
 ---
 

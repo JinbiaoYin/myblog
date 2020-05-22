@@ -1,5 +1,4 @@
 ---
-autoGroup-1: Java 编程思想
 title: 第1章 对象导论
 ---
 

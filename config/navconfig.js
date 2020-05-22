@@ -2,6 +2,13 @@ module.exports = [
     { text: 'Home', link: '/' },
     { text: 'Guide', link: '/guide/' },
     { 
+        text: '书籍', items: [
+            { text: 'Java编程思想', link: '/book/tij/' },
+            { text: 'MySQL必知必会', link: '/book/mysqlbzbh/'},
+            { text: '高性能MySQL', link: '/book/hpmysql/'},
+        ]
+    },
+    { 
         text: '前端', items: [
             { text: 'Vue', link: '/front/vue/' },
         ]
@@ -37,7 +44,6 @@ module.exports = [
         text: '其它', items: [    
             { text: 'CICD', link: '/others/cicd/'},
             { text: 'SDK', link: '/others/sdk/' },
-            { text: 'Issues', link: '/others/issues/' },
             { text: 'Utils', link: '/others/utils/' },
             { text: '工作记录', link: '/others/work/' },
             { text: '面试宝典', link: '/others/interview/' },

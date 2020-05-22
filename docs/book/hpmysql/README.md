@@ -1,5 +1,4 @@
 ---
-autoGroup-1: 高性能 MySQL
 title: 译者序
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: SpringBoot 自定义 Properties
+title: SpringBoot自定义Properties
 ---
 
 ## 快速入门

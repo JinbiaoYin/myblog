@@ -1,8 +1,7 @@
 ---
-title: javax.persistence
+title: javax.persistence包的常用注解
 ---
 
-## 常用注解
 
 - @Entity(name="")：用于标识该类是实体类
 - @Table(name="",catalog="",scheme="")：用于表示数据库映射的表名，name用于指明数据库的表名 ，catalog 和 schema 用于设置表所属的数据库目录或模式，通常为数据库名

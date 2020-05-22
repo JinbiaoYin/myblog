@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第15章 泛型 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.760b12c1.css" as="style"><link rel="preload" href="/assets/js/app.25085775.js" as="script"><link rel="preload" href="/assets/js/3.0ed2837d.js" as="script"><link rel="preload" href="/assets/js/47.063b3ee3.js" as="script"><link rel="preload" href="/assets/js/4.1cff9343.js" as="script"><link rel="prefetch" href="/assets/js/10.9907d049.js"><link rel="prefetch" href="/assets/js/11.b4945d1e.js"><link rel="prefetch" href="/assets/js/12.861ab73e.js"><link rel="prefetch" href="/assets/js/13.2bdcd491.js"><link rel="prefetch" href="/assets/js/14.254c943e.js"><link rel="prefetch" href="/assets/js/15.1084c07a.js"><link rel="prefetch" href="/assets/js/16.3493d7fd.js"><link rel="prefetch" href="/assets/js/17.2e6336e9.js"><link rel="prefetch" href="/assets/js/18.1fb23495.js"><link rel="prefetch" href="/assets/js/19.3d715eb1.js"><link rel="prefetch" href="/assets/js/20.5960d53d.js"><link rel="prefetch" href="/assets/js/21.8d562585.js"><link rel="prefetch" href="/assets/js/22.fa98c18d.js"><link rel="prefetch" href="/assets/js/23.e46c0299.js"><link rel="prefetch" href="/assets/js/24.5256a978.js"><link rel="prefetch" href="/assets/js/25.43946f7d.js"><link rel="prefetch" href="/assets/js/26.4acc0cff.js"><link rel="prefetch" href="/assets/js/27.6eb3998d.js"><link rel="prefetch" href="/assets/js/28.4cd43c4f.js"><link rel="prefetch" href="/assets/js/29.bb7a915f.js"><link rel="prefetch" href="/assets/js/30.718adaa2.js"><link rel="prefetch" href="/assets/js/31.c94dbf19.js"><link rel="prefetch" href="/assets/js/32.f43ba54d.js"><link rel="prefetch" href="/assets/js/33.32be603b.js"><link rel="prefetch" href="/assets/js/34.19209dbd.js"><link rel="prefetch" href="/assets/js/35.71acd1e3.js"><link rel="prefetch" href="/assets/js/36.6a3ad3ba.js"><link rel="prefetch" href="/assets/js/37.dd193e13.js"><link rel="prefetch" href="/assets/js/38.247a3258.js"><link rel="prefetch" href="/assets/js/39.c91f25d9.js"><link rel="prefetch" href="/assets/js/40.75b40fa0.js"><link rel="prefetch" href="/assets/js/41.a9059c8c.js"><link rel="prefetch" href="/assets/js/42.e965eeb9.js"><link rel="prefetch" href="/assets/js/43.6999f31b.js"><link rel="prefetch" href="/assets/js/44.eefdbe66.js"><link rel="prefetch" href="/assets/js/45.95910fe6.js"><link rel="prefetch" href="/assets/js/46.e6f0140d.js"><link rel="prefetch" href="/assets/js/48.2de90ba1.js"><link rel="prefetch" href="/assets/js/49.699be93a.js"><link rel="prefetch" href="/assets/js/5.7f687d21.js"><link rel="prefetch" href="/assets/js/50.5dce1075.js"><link rel="prefetch" href="/assets/js/51.2ee7ba31.js"><link rel="prefetch" href="/assets/js/52.bb4935c3.js"><link rel="prefetch" href="/assets/js/53.a068fe5e.js"><link rel="prefetch" href="/assets/js/54.91f17f0a.js"><link rel="prefetch" href="/assets/js/55.69dcdd11.js"><link rel="prefetch" href="/assets/js/56.1a234f41.js"><link rel="prefetch" href="/assets/js/57.b08ae875.js"><link rel="prefetch" href="/assets/js/58.42ea65e8.js"><link rel="prefetch" href="/assets/js/59.a3f6c292.js"><link rel="prefetch" href="/assets/js/6.22aee358.js"><link rel="prefetch" href="/assets/js/60.5f5115bf.js"><link rel="prefetch" href="/assets/js/61.63c97c08.js"><link rel="prefetch" href="/assets/js/62.ad43c948.js"><link rel="prefetch" href="/assets/js/63.bfae5419.js"><link rel="prefetch" href="/assets/js/64.592cd470.js"><link rel="prefetch" href="/assets/js/65.e1f0e21f.js"><link rel="prefetch" href="/assets/js/66.1b137b25.js"><link rel="prefetch" href="/assets/js/67.a5fe7bf5.js"><link rel="prefetch" href="/assets/js/68.0d88e27f.js"><link rel="prefetch" href="/assets/js/69.d5d1faf3.js"><link rel="prefetch" href="/assets/js/7.fc9353bd.js"><link rel="prefetch" href="/assets/js/70.a2d1ebe8.js"><link rel="prefetch" href="/assets/js/71.8a25caba.js"><link rel="prefetch" href="/assets/js/72.9452e191.js"><link rel="prefetch" href="/assets/js/73.f5b2c2f6.js"><link rel="prefetch" href="/assets/js/74.41703401.js"><link rel="prefetch" href="/assets/js/75.f8107e78.js"><link rel="prefetch" href="/assets/js/76.2745d015.js"><link rel="prefetch" href="/assets/js/77.6cc4fbcb.js"><link rel="prefetch" href="/assets/js/78.6763b96a.js"><link rel="prefetch" href="/assets/js/79.7ad54199.js"><link rel="prefetch" href="/assets/js/8.ffce501b.js"><link rel="prefetch" href="/assets/js/80.35eb4f4e.js"><link rel="prefetch" href="/assets/js/81.f98ea797.js"><link rel="prefetch" href="/assets/js/82.e57909e0.js"><link rel="prefetch" href="/assets/js/83.fb8810dd.js"><link rel="prefetch" href="/assets/js/84.194dafa9.js"><link rel="prefetch" href="/assets/js/85.bac88c03.js"><link rel="prefetch" href="/assets/js/86.213b5758.js"><link rel="prefetch" href="/assets/js/87.7ec605ab.js"><link rel="prefetch" href="/assets/js/88.10cb9445.js"><link rel="prefetch" href="/assets/js/89.798ac772.js"><link rel="prefetch" href="/assets/js/9.f8c7bcc6.js"><link rel="prefetch" href="/assets/js/90.fc849176.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5c1d7bb5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.760b12c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link router-link-active">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link router-link-active">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TIJ</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/tij/" class="sidebar-link">第1章 对象导论</a></li><li><a href="/book/tij/b-2.html" class="sidebar-link">第2章 一切都是对象</a></li><li><a href="/book/tij/c-3.html" class="sidebar-link">第3章 操作符</a></li><li><a href="/book/tij/d-4.html" class="sidebar-link">第4章 控制执行流程</a></li><li><a href="/book/tij/e-5.html" class="sidebar-link">第5章 初始化与清理</a></li><li><a href="/book/tij/f-6.html" class="sidebar-link">第6章 访问权限控制</a></li><li><a href="/book/tij/h-7.html" class="sidebar-link">第7章 复用类</a></li><li><a href="/book/tij/i-8.html" class="sidebar-link">第8章 多态</a></li><li><a href="/book/tij/j-9.html" class="sidebar-link">第9章 接口</a></li><li><a href="/book/tij/k-10.html" class="sidebar-link">第10章 内部类</a></li><li><a href="/book/tij/l-11.html" class="sidebar-link">第11章 持有对象</a></li><li><a href="/book/tij/m-12.html" class="sidebar-link">第12章 异常</a></li><li><a href="/book/tij/n-13.html" class="sidebar-link">第13章 字符串</a></li><li><a href="/book/tij/o-14.html" class="sidebar-link">第14章 类型信息</a></li><li><a href="/book/tij/p-15.html" class="active sidebar-link">第15章 泛型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/tij/p-15.html#_15-2-简单泛型" class="sidebar-link">15.2 简单泛型</a></li><li class="sidebar-sub-header"><a href="/book/tij/p-15.html#_15-4-泛型方法" class="sidebar-link">15.4 泛型方法</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>一般的类和方法，只能使用具体的类型：要么是基本类型，要么是自定义的类。如果要编写可以应用于多种类型的代码，这种刻板的限制对代码的束缚就会很大。</p></blockquote> <p>泛型实现了<strong>参数化类型</strong>的概念，使代码可以应用于多种类型。</p> <h2 id="_15-2-简单泛型"><a href="#_15-2-简单泛型" class="header-anchor">#</a> 15.2 简单泛型</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Holder</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">T</span> a<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Holder</span><span class="token punctuation">(</span><span class="token class-name">T</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token class-name">T</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Holder</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> holder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Holder</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">User</span> user <span class="token operator">=</span> holder<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//holder.set(new Role()); 不能通过编译</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_15-4-泛型方法"><a href="#_15-4-泛型方法" class="header-anchor">#</a> 15.4 泛型方法</h2> <p>是否拥有泛型方法，与其所在类是否是泛型没有关系。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GenericMethods</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token class-name">T</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token class-name">GenericMethods</span> gm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GenericMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1.0F</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	gm<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span>gm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <ol><li>public 与<code>&lt;T&gt;</code>可以理解为声明此方法为泛型方法。</li> <li>只有声明了<code>&lt;T&gt;</code>的方法才是泛型方法，泛型类中使用了泛型的成员方法并不是泛型方法。</li> <li><code>&lt;T&gt;</code>表明该方法将使用泛型类型T，此时才可以在方法中使用泛型类型T。</li> <li>与泛型类的定义一样，此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型。</li></ol></div> <h3 id="_15-4-1-杠杆利用类型参数推断"><a href="#_15-4-1-杠杆利用类型参数推断" class="header-anchor">#</a> 15.4.1 杠杆利用类型参数推断</h3> <p>使用泛型时有时需要向程序中加入更多代码。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这是因为编译器还无法从泛型列表中的参数推断另一个参数。而在泛型方法中，类型参数推断却可以简化一部分工作。例如，Google的工具类 guava.</p> <p>例如，我们也可以编写一个工具类，专门用来创建常用的容器对象。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">New</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">K</span><span class="token punctuation">,</span><span class="token class-name">V</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">K</span><span class="token punctuation">,</span><span class="token class-name">V</span><span class="token punctuation">&gt;</span></span> <span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">K</span><span class="token punctuation">,</span><span class="token class-name">V</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token function">lList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token function">queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> sls <span class="token operator">=</span> <span class="token class-name">New</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> ls <span class="token operator">=</span> <span class="token class-name">New</span><span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> lls <span class="token operator">=</span> <span class="token class-name">New</span><span class="token punctuation">.</span><span class="token function">lList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> ss <span class="token operator">=</span> <span class="token class-name">New</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> qs <span class="token operator">=</span> <span class="token class-name">New</span><span class="token punctuation">.</span><span class="token function">queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>类型推断只对以上赋值操作有效，其它时候并不起作用。例如使用它作为参数时，必须指定泛型的类型：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Person</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> petPeople<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//f(New.map());//不能通过编译</span>
+		<span class="token function">f</span><span class="token punctuation">(</span><span class="token class-name">New</span><span class="token punctuation">.</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Person</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Pet</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-05-22 01:21:23</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/tij/o-14.html" class="prev">
+        第14章 类型信息
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.25085775.js" defer></script><script src="/assets/js/3.0ed2837d.js" defer></script><script src="/assets/js/47.063b3ee3.js" defer></script><script src="/assets/js/4.1cff9343.js" defer></script>
+  </body>
+</html>

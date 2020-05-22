@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第6章 访问权限控制 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.760b12c1.css" as="style"><link rel="preload" href="/assets/js/app.25085775.js" as="script"><link rel="preload" href="/assets/js/3.0ed2837d.js" as="script"><link rel="preload" href="/assets/js/38.247a3258.js" as="script"><link rel="preload" href="/assets/js/4.1cff9343.js" as="script"><link rel="prefetch" href="/assets/js/10.9907d049.js"><link rel="prefetch" href="/assets/js/11.b4945d1e.js"><link rel="prefetch" href="/assets/js/12.861ab73e.js"><link rel="prefetch" href="/assets/js/13.2bdcd491.js"><link rel="prefetch" href="/assets/js/14.254c943e.js"><link rel="prefetch" href="/assets/js/15.1084c07a.js"><link rel="prefetch" href="/assets/js/16.3493d7fd.js"><link rel="prefetch" href="/assets/js/17.2e6336e9.js"><link rel="prefetch" href="/assets/js/18.1fb23495.js"><link rel="prefetch" href="/assets/js/19.3d715eb1.js"><link rel="prefetch" href="/assets/js/20.5960d53d.js"><link rel="prefetch" href="/assets/js/21.8d562585.js"><link rel="prefetch" href="/assets/js/22.fa98c18d.js"><link rel="prefetch" href="/assets/js/23.e46c0299.js"><link rel="prefetch" href="/assets/js/24.5256a978.js"><link rel="prefetch" href="/assets/js/25.43946f7d.js"><link rel="prefetch" href="/assets/js/26.4acc0cff.js"><link rel="prefetch" href="/assets/js/27.6eb3998d.js"><link rel="prefetch" href="/assets/js/28.4cd43c4f.js"><link rel="prefetch" href="/assets/js/29.bb7a915f.js"><link rel="prefetch" href="/assets/js/30.718adaa2.js"><link rel="prefetch" href="/assets/js/31.c94dbf19.js"><link rel="prefetch" href="/assets/js/32.f43ba54d.js"><link rel="prefetch" href="/assets/js/33.32be603b.js"><link rel="prefetch" href="/assets/js/34.19209dbd.js"><link rel="prefetch" href="/assets/js/35.71acd1e3.js"><link rel="prefetch" href="/assets/js/36.6a3ad3ba.js"><link rel="prefetch" href="/assets/js/37.dd193e13.js"><link rel="prefetch" href="/assets/js/39.c91f25d9.js"><link rel="prefetch" href="/assets/js/40.75b40fa0.js"><link rel="prefetch" href="/assets/js/41.a9059c8c.js"><link rel="prefetch" href="/assets/js/42.e965eeb9.js"><link rel="prefetch" href="/assets/js/43.6999f31b.js"><link rel="prefetch" href="/assets/js/44.eefdbe66.js"><link rel="prefetch" href="/assets/js/45.95910fe6.js"><link rel="prefetch" href="/assets/js/46.e6f0140d.js"><link rel="prefetch" href="/assets/js/47.063b3ee3.js"><link rel="prefetch" href="/assets/js/48.2de90ba1.js"><link rel="prefetch" href="/assets/js/49.699be93a.js"><link rel="prefetch" href="/assets/js/5.7f687d21.js"><link rel="prefetch" href="/assets/js/50.5dce1075.js"><link rel="prefetch" href="/assets/js/51.2ee7ba31.js"><link rel="prefetch" href="/assets/js/52.bb4935c3.js"><link rel="prefetch" href="/assets/js/53.a068fe5e.js"><link rel="prefetch" href="/assets/js/54.91f17f0a.js"><link rel="prefetch" href="/assets/js/55.69dcdd11.js"><link rel="prefetch" href="/assets/js/56.1a234f41.js"><link rel="prefetch" href="/assets/js/57.b08ae875.js"><link rel="prefetch" href="/assets/js/58.42ea65e8.js"><link rel="prefetch" href="/assets/js/59.a3f6c292.js"><link rel="prefetch" href="/assets/js/6.22aee358.js"><link rel="prefetch" href="/assets/js/60.5f5115bf.js"><link rel="prefetch" href="/assets/js/61.63c97c08.js"><link rel="prefetch" href="/assets/js/62.ad43c948.js"><link rel="prefetch" href="/assets/js/63.bfae5419.js"><link rel="prefetch" href="/assets/js/64.592cd470.js"><link rel="prefetch" href="/assets/js/65.e1f0e21f.js"><link rel="prefetch" href="/assets/js/66.1b137b25.js"><link rel="prefetch" href="/assets/js/67.a5fe7bf5.js"><link rel="prefetch" href="/assets/js/68.0d88e27f.js"><link rel="prefetch" href="/assets/js/69.d5d1faf3.js"><link rel="prefetch" href="/assets/js/7.fc9353bd.js"><link rel="prefetch" href="/assets/js/70.a2d1ebe8.js"><link rel="prefetch" href="/assets/js/71.8a25caba.js"><link rel="prefetch" href="/assets/js/72.9452e191.js"><link rel="prefetch" href="/assets/js/73.f5b2c2f6.js"><link rel="prefetch" href="/assets/js/74.41703401.js"><link rel="prefetch" href="/assets/js/75.f8107e78.js"><link rel="prefetch" href="/assets/js/76.2745d015.js"><link rel="prefetch" href="/assets/js/77.6cc4fbcb.js"><link rel="prefetch" href="/assets/js/78.6763b96a.js"><link rel="prefetch" href="/assets/js/79.7ad54199.js"><link rel="prefetch" href="/assets/js/8.ffce501b.js"><link rel="prefetch" href="/assets/js/80.35eb4f4e.js"><link rel="prefetch" href="/assets/js/81.f98ea797.js"><link rel="prefetch" href="/assets/js/82.e57909e0.js"><link rel="prefetch" href="/assets/js/83.fb8810dd.js"><link rel="prefetch" href="/assets/js/84.194dafa9.js"><link rel="prefetch" href="/assets/js/85.bac88c03.js"><link rel="prefetch" href="/assets/js/86.213b5758.js"><link rel="prefetch" href="/assets/js/87.7ec605ab.js"><link rel="prefetch" href="/assets/js/88.10cb9445.js"><link rel="prefetch" href="/assets/js/89.798ac772.js"><link rel="prefetch" href="/assets/js/9.f8c7bcc6.js"><link rel="prefetch" href="/assets/js/90.fc849176.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5c1d7bb5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.760b12c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link router-link-active">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link router-link-active">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TIJ</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/tij/" class="sidebar-link">第1章 对象导论</a></li><li><a href="/book/tij/b-2.html" class="sidebar-link">第2章 一切都是对象</a></li><li><a href="/book/tij/c-3.html" class="sidebar-link">第3章 操作符</a></li><li><a href="/book/tij/d-4.html" class="sidebar-link">第4章 控制执行流程</a></li><li><a href="/book/tij/e-5.html" class="sidebar-link">第5章 初始化与清理</a></li><li><a href="/book/tij/f-6.html" class="active sidebar-link">第6章 访问权限控制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/tij/f-6.html#_6-1-包" class="sidebar-link">6.1 包</a></li><li class="sidebar-sub-header"><a href="/book/tij/f-6.html#_6-2-访问权限" class="sidebar-link">6.2 访问权限</a></li><li class="sidebar-sub-header"><a href="/book/tij/f-6.html#_6-3-接口和实现" class="sidebar-link">6.3 接口和实现</a></li><li class="sidebar-sub-header"><a href="/book/tij/f-6.html#_6-4-类的访问权限" class="sidebar-link">6.4 类的访问权限</a></li><li class="sidebar-sub-header"><a href="/book/tij/f-6.html#_6-5-总结" class="sidebar-link">6.5 总结</a></li></ul></li><li><a href="/book/tij/h-7.html" class="sidebar-link">第7章 复用类</a></li><li><a href="/book/tij/i-8.html" class="sidebar-link">第8章 多态</a></li><li><a href="/book/tij/j-9.html" class="sidebar-link">第9章 接口</a></li><li><a href="/book/tij/k-10.html" class="sidebar-link">第10章 内部类</a></li><li><a href="/book/tij/l-11.html" class="sidebar-link">第11章 持有对象</a></li><li><a href="/book/tij/m-12.html" class="sidebar-link">第12章 异常</a></li><li><a href="/book/tij/n-13.html" class="sidebar-link">第13章 字符串</a></li><li><a href="/book/tij/o-14.html" class="sidebar-link">第14章 类型信息</a></li><li><a href="/book/tij/p-15.html" class="sidebar-link">第15章 泛型</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>访问控制（或隐藏具体实现）与“最初的实现并不恰当”有关。</p></blockquote> <p>如果你把一个代码段放到了某个位置，等过一会回头再看，可能会发现有更好的方法去实现。这正是重构的原动力之一，重构即重写代码，以使得它更可读，更易理解，并因此更具可维护性。</p> <p>但是总有一些消费者（客户端程序员）需要你的代码在某些方面保持不变。你想改，他们却不想让你改。由此产生了面向对象设计中的一个基本问题：“如何把变动的事物与保持不变的事物区分开来”。</p> <p>这目标可以通过约定来达到。类库开发者必须同意不得删除现有方法。但是这更加棘手，类库开发者必须知道哪些数据成员被调用。</p> <p>为了解决类库开发者重构不影响客户端调用者的现有代码的问题，Java 提供了访问权限修饰词，以指明哪些是可用的，哪些是不可用的。访问权限的等级，从大到小依次为：<code>public</code>，<code>protected</code>，包访问权限（没有关键字）和 <code>private</code>。</p> <h2 id="_6-1-包"><a href="#_6-1-包" class="header-anchor">#</a> 6.1 包</h2> <p><code>package</code>用于解决不同命名空间的类重名问题。</p> <p>每一个 java 文件，只能有一个<code>public</code>类，且类名必须和文件名相同，其它不用<code>public</code>修饰的类，只能在本包内被使用。</p> <h2 id="_6-2-访问权限"><a href="#_6-2-访问权限" class="header-anchor">#</a> 6.2 访问权限</h2> <h3 id="_6-2-1-包访问权限"><a href="#_6-2-1-包访问权限" class="header-anchor">#</a> 6.2.1 包访问权限</h3> <p>它是默认访问权限，没有任何权限修饰符修饰就代表它只有包访问权限，只有同一个包下可以访问。</p> <h3 id="_6-2-2-public"><a href="#_6-2-2-public" class="header-anchor">#</a> 6.2.2 public</h3> <p>使用<code>public</code>修饰的元素对每个人都是可用的。</p> <h3 id="_6-2-3-private"><a href="#_6-2-3-private" class="header-anchor">#</a> 6.2.3 private</h3> <p>任何可以肯定只是该类的一个“助手”方法的方法，都可以指定为<code>private</code>，以确保不会在包内的其他地方误用。</p> <p>除非必须公开底层实现细目，负责就应该讲所有的域指定为<code>private</code>。</p> <h3 id="_6-2-4-protected"><a href="#_6-2-4-protected" class="header-anchor">#</a> 6.2.4 protected</h3> <p>如果希望有某个成员的访问权限只赋予给子类，那么就需要<code>protected</code>来完成这一工作。</p> <p><code>protected</code>也提供包访问权限。</p> <h2 id="_6-3-接口和实现"><a href="#_6-3-接口和实现" class="header-anchor">#</a> 6.3 接口和实现</h2> <p>访问权限的控制常被成为是<strong>具体实现的隐藏</strong>。</p> <p>把数据和方法包装进类中，以及具体实现的隐藏，常共同被称作是<strong>封装</strong>。</p> <h2 id="_6-4-类的访问权限"><a href="#_6-4-类的访问权限" class="header-anchor">#</a> 6.4 类的访问权限</h2> <p>访问权限修饰词也可以用于类上。</p> <p>但是，类不可以是<code>private</code>的，也不可以是<code>protected</code>。所以对于类的访问权限，只有:包访问权限或<code>public</code>。</p> <p>如果不希望其它人访问该类，可以把所有构造器指定为<code>private</code>，这样的话只有你在类的<code>static</code>成员内部可以创建。</p> <h2 id="_6-5-总结"><a href="#_6-5-总结" class="header-anchor">#</a> 6.5 总结</h2> <p>访问权限从大到小排序：<code>public</code>&gt;<code>protected</code>&gt;包默认权限&gt;<code>private</code>。</p> <p>类只有<code>public</code>和包默认权限。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-05-22 01:21:23</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/tij/e-5.html" class="prev">
+        第5章 初始化与清理
+      </a></span> <span class="next"><a href="/book/tij/h-7.html">
+        第7章 复用类
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.25085775.js" defer></script><script src="/assets/js/3.0ed2837d.js" defer></script><script src="/assets/js/38.247a3258.js" defer></script><script src="/assets/js/4.1cff9343.js" defer></script>
+  </body>
+</html>

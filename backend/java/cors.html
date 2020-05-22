@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>跨域问题 | 小二温不胜</title>
+    <meta name="description" content="温不胜的blog">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    
+    <link rel="preload" href="/assets/css/0.styles.760b12c1.css" as="style"><link rel="preload" href="/assets/js/app.25085775.js" as="script"><link rel="preload" href="/assets/js/3.0ed2837d.js" as="script"><link rel="preload" href="/assets/js/14.254c943e.js" as="script"><link rel="preload" href="/assets/js/4.1cff9343.js" as="script"><link rel="prefetch" href="/assets/js/10.9907d049.js"><link rel="prefetch" href="/assets/js/11.b4945d1e.js"><link rel="prefetch" href="/assets/js/12.861ab73e.js"><link rel="prefetch" href="/assets/js/13.2bdcd491.js"><link rel="prefetch" href="/assets/js/15.1084c07a.js"><link rel="prefetch" href="/assets/js/16.3493d7fd.js"><link rel="prefetch" href="/assets/js/17.2e6336e9.js"><link rel="prefetch" href="/assets/js/18.1fb23495.js"><link rel="prefetch" href="/assets/js/19.3d715eb1.js"><link rel="prefetch" href="/assets/js/20.5960d53d.js"><link rel="prefetch" href="/assets/js/21.8d562585.js"><link rel="prefetch" href="/assets/js/22.fa98c18d.js"><link rel="prefetch" href="/assets/js/23.e46c0299.js"><link rel="prefetch" href="/assets/js/24.5256a978.js"><link rel="prefetch" href="/assets/js/25.43946f7d.js"><link rel="prefetch" href="/assets/js/26.4acc0cff.js"><link rel="prefetch" href="/assets/js/27.6eb3998d.js"><link rel="prefetch" href="/assets/js/28.4cd43c4f.js"><link rel="prefetch" href="/assets/js/29.bb7a915f.js"><link rel="prefetch" href="/assets/js/30.718adaa2.js"><link rel="prefetch" href="/assets/js/31.c94dbf19.js"><link rel="prefetch" href="/assets/js/32.f43ba54d.js"><link rel="prefetch" href="/assets/js/33.32be603b.js"><link rel="prefetch" href="/assets/js/34.19209dbd.js"><link rel="prefetch" href="/assets/js/35.71acd1e3.js"><link rel="prefetch" href="/assets/js/36.6a3ad3ba.js"><link rel="prefetch" href="/assets/js/37.dd193e13.js"><link rel="prefetch" href="/assets/js/38.247a3258.js"><link rel="prefetch" href="/assets/js/39.c91f25d9.js"><link rel="prefetch" href="/assets/js/40.75b40fa0.js"><link rel="prefetch" href="/assets/js/41.a9059c8c.js"><link rel="prefetch" href="/assets/js/42.e965eeb9.js"><link rel="prefetch" href="/assets/js/43.6999f31b.js"><link rel="prefetch" href="/assets/js/44.eefdbe66.js"><link rel="prefetch" href="/assets/js/45.95910fe6.js"><link rel="prefetch" href="/assets/js/46.e6f0140d.js"><link rel="prefetch" href="/assets/js/47.063b3ee3.js"><link rel="prefetch" href="/assets/js/48.2de90ba1.js"><link rel="prefetch" href="/assets/js/49.699be93a.js"><link rel="prefetch" href="/assets/js/5.7f687d21.js"><link rel="prefetch" href="/assets/js/50.5dce1075.js"><link rel="prefetch" href="/assets/js/51.2ee7ba31.js"><link rel="prefetch" href="/assets/js/52.bb4935c3.js"><link rel="prefetch" href="/assets/js/53.a068fe5e.js"><link rel="prefetch" href="/assets/js/54.91f17f0a.js"><link rel="prefetch" href="/assets/js/55.69dcdd11.js"><link rel="prefetch" href="/assets/js/56.1a234f41.js"><link rel="prefetch" href="/assets/js/57.b08ae875.js"><link rel="prefetch" href="/assets/js/58.42ea65e8.js"><link rel="prefetch" href="/assets/js/59.a3f6c292.js"><link rel="prefetch" href="/assets/js/6.22aee358.js"><link rel="prefetch" href="/assets/js/60.5f5115bf.js"><link rel="prefetch" href="/assets/js/61.63c97c08.js"><link rel="prefetch" href="/assets/js/62.ad43c948.js"><link rel="prefetch" href="/assets/js/63.bfae5419.js"><link rel="prefetch" href="/assets/js/64.592cd470.js"><link rel="prefetch" href="/assets/js/65.e1f0e21f.js"><link rel="prefetch" href="/assets/js/66.1b137b25.js"><link rel="prefetch" href="/assets/js/67.a5fe7bf5.js"><link rel="prefetch" href="/assets/js/68.0d88e27f.js"><link rel="prefetch" href="/assets/js/69.d5d1faf3.js"><link rel="prefetch" href="/assets/js/7.fc9353bd.js"><link rel="prefetch" href="/assets/js/70.a2d1ebe8.js"><link rel="prefetch" href="/assets/js/71.8a25caba.js"><link rel="prefetch" href="/assets/js/72.9452e191.js"><link rel="prefetch" href="/assets/js/73.f5b2c2f6.js"><link rel="prefetch" href="/assets/js/74.41703401.js"><link rel="prefetch" href="/assets/js/75.f8107e78.js"><link rel="prefetch" href="/assets/js/76.2745d015.js"><link rel="prefetch" href="/assets/js/77.6cc4fbcb.js"><link rel="prefetch" href="/assets/js/78.6763b96a.js"><link rel="prefetch" href="/assets/js/79.7ad54199.js"><link rel="prefetch" href="/assets/js/8.ffce501b.js"><link rel="prefetch" href="/assets/js/80.35eb4f4e.js"><link rel="prefetch" href="/assets/js/81.f98ea797.js"><link rel="prefetch" href="/assets/js/82.e57909e0.js"><link rel="prefetch" href="/assets/js/83.fb8810dd.js"><link rel="prefetch" href="/assets/js/84.194dafa9.js"><link rel="prefetch" href="/assets/js/85.bac88c03.js"><link rel="prefetch" href="/assets/js/86.213b5758.js"><link rel="prefetch" href="/assets/js/87.7ec605ab.js"><link rel="prefetch" href="/assets/js/88.10cb9445.js"><link rel="prefetch" href="/assets/js/89.798ac772.js"><link rel="prefetch" href="/assets/js/9.f8c7bcc6.js"><link rel="prefetch" href="/assets/js/90.fc849176.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5c1d7bb5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.760b12c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小二温不胜</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍" class="dropdown-title"><span class="title">书籍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/tij/" class="nav-link">
+  Java编程思想
+</a></li><li class="dropdown-item"><!----> <a href="/book/mysqlbzbh/" class="nav-link">
+  MySQL必知必会
+</a></li><li class="dropdown-item"><!----> <a href="/book/hpmysql/" class="nav-link">
+  高性能MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/backend/go/" class="nav-link">
+  Go
+</a></li><li class="dropdown-item"><!----> <a href="/backend/internet/" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/database/oracle/" class="nav-link">
+  Oracle
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/linux/" class="nav-link">
+  Linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tools/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/tools/navicat/" class="nav-link">
+  Navicat
+</a></li><li class="dropdown-item"><!----> <a href="/tools/maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/tools/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/cicd/" class="nav-link">
+  CICD
+</a></li><li class="dropdown-item"><!----> <a href="/others/sdk/" class="nav-link">
+  SDK
+</a></li><li class="dropdown-item"><!----> <a href="/others/utils/" class="nav-link">
+  Utils
+</a></li><li class="dropdown-item"><!----> <a href="/others/work/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/others/interview/" class="nav-link">
+  面试宝典
+</a></li></ul></div></div> <a href="https://github.com/JinbiaoYin/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JAVA</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/java/" class="sidebar-link">介绍</a></li><li><a href="/backend/java/annotation.html" class="sidebar-link">注解的继承</a></li><li><a href="/backend/java/cors.html" class="active sidebar-link">跨域问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/java/cors.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/backend/java/cors.html#什么是同源？" class="sidebar-link">什么是同源？</a></li><li class="sidebar-sub-header"><a href="/backend/java/cors.html#如何解决跨域问题" class="sidebar-link">如何解决跨域问题</a></li></ul></li><li><a href="/backend/java/elasticsearch.html" class="sidebar-link">Elastic Search</a></li><li><a href="/backend/java/finally.html" class="sidebar-link">finally return</a></li><li><a href="/backend/java/javax-persistence.html" class="sidebar-link">javax.persistence包的常用注解</a></li><li><a href="/backend/java/log.html" class="sidebar-link">如何解决日志循环依赖</a></li><li><a href="/backend/java/lombok.html" class="sidebar-link">lombok</a></li><li><a href="/backend/java/mybatis.html" class="sidebar-link">mybatis</a></li><li><a href="/backend/java/properties.html" class="sidebar-link">SpringBoot自定义Properties</a></li><li><a href="/backend/java/quartz.html" class="sidebar-link">quartz</a></li><li><a href="/backend/java/rabbitMQ.html" class="sidebar-link">RabbitMQ</a></li><li><a href="/backend/java/spring-security-oauth2.html" class="sidebar-link">Spring Security Oauth2</a></li><li><a href="/backend/java/swagger.html" class="sidebar-link">swagger</a></li><li><a href="/backend/java/websocket.html" class="sidebar-link">websocket</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>在浏览器端进行 Ajax 请求时会出现跨域问题。</p> <p>跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的<strong>同源策略</strong>造成的，是浏览器对 JavaScript 施加的安全限制。</p> <h2 id="什么是同源？"><a href="#什么是同源？" class="header-anchor">#</a> 什么是同源？</h2> <p>所谓同源是指，域名，协议，端口均相同</p> <ul><li>http://www.funtl.com --&gt; http://admin.funtl.com 跨域</li> <li>http://www.funtl.com --&gt; http://www.funtl.com 非跨域</li> <li>http://www.funtl.com --&gt; http://www.funtl.com:8080 跨域</li> <li>http://www.funtl.com --&gt; https://www.funtl.com 跨域</li></ul> <h2 id="如何解决跨域问题"><a href="#如何解决跨域问题" class="header-anchor">#</a> 如何解决跨域问题</h2> <h3 id="使用cors-跨域资源共享-解决跨域问题"><a href="#使用cors-跨域资源共享-解决跨域问题" class="header-anchor">#</a> 使用CORS(跨域资源共享)解决跨域问题</h3> <p>CORS 是一个 W3C 标准，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出 XMLHttpRequest 请求，从而克服了 AJAX 只能同源使用的限制。</p> <p>CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE 浏览器不能低于 IE10。整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与同源的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨源通信（在 header 中设置：Access-Control-Allow-Origin）</p> <h3 id="spring-boot-配置-cors"><a href="#spring-boot-配置-cors" class="header-anchor">#</a> Spring Boot 配置 CORS</h3> <h4 id="使用-java-配置的方式"><a href="#使用-java-配置的方式" class="header-anchor">#</a> 使用 Java 配置的方式</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CORSConfiguration</span> <span class="token keyword">extends</span> <span class="token class-name">WebMvcConfigurerAdapter</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addCorsMappings</span><span class="token punctuation">(</span><span class="token class-name">CorsRegistry</span> registry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        registry<span class="token punctuation">.</span><span class="token function">addMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/**&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">allowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">allowedMethods</span><span class="token punctuation">(</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;HEAD&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;PUT&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;DELETE&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;OPTIONS&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">allowCredentials</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">maxAge</span><span class="token punctuation">(</span><span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用注解的方式"><a href="#使用注解的方式" class="header-anchor">#</a> 使用注解的方式</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@CrossOrigin</span><span class="token punctuation">(</span>origins <span class="token operator">=</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span> maxAge <span class="token operator">=</span> <span class="token number">3600</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>origin=&quot;*&quot;代表所有域名都可访问</li> <li>maxAge: maxAge飞行前响应的缓存持续时间的最大年龄，简单来说就是Cookie的有效期 单位为秒。</li></ul> <h3 id="使用-jsonp-解决跨域问题"><a href="#使用-jsonp-解决跨域问题" class="header-anchor">#</a> 使用 JSONP 解决跨域问题</h3> <p>JSONP（JSON with Padding）是 JSON 的一种“使用模式”，可用于解决主流浏览器的跨域数据访问的问题。由于同源策略，一般来说位于 server1.example.com 的网页无法与 server2.example.com 的服务器沟通，而 HTML 的 <code>&lt;script&gt;</code> 元素是一个例外。利用 <code>&lt;script&gt;</code> 元素的这个开放策略，网页可以得到从其他来源动态产生的 JSON 资料，而这种使用模式就是所谓的 JSONP。用 JSONP 抓到的资料并不是 JSON，而是任意的 JavaScript，用 JavaScript 直译器执行而不是用 JSON 解析器解析（需要目标服务器配合一个 callback 函数）。</p> <h3 id="cors-与-jsonp-的比较"><a href="#cors-与-jsonp-的比较" class="header-anchor">#</a> CORS 与 JSONP 的比较</h3> <p>CORS 与 JSONP 的使用目的相同，但是比 JSONP 更强大。</p> <p>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求。JSONP 的优势在于支持老式浏览器，以及可以向不支持 CORS 的网站请求数据。</p> <h3 id="使用nginx反向代理解决跨域问题"><a href="#使用nginx反向代理解决跨域问题" class="header-anchor">#</a> 使用Nginx反向代理解决跨域问题</h3> <p>以上跨域问题解决方案都需要服务器支持，当服务器无法设置 header 或提供 callback 时我们就可以采用 Nginx 反向代理的方式解决跨域问题。</p> <p>Nginx 配置跨域案例，在 nginx.conf 的 location 中增加如下配置：</p> <div class="language- extra-class"><pre class="language-text"><code>add_header Access-Control-Allow-Origin * (或域名);
+add_header Access-Control-Allow-Headers X-Requested-With;
+add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+</code></pre></div><p>如：</p> <div class="language- extra-class"><pre class="language-text"><code>user  nginx;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+
+    keepalive_timeout  65;
+
+    server {
+        listen 80;
+        server_name 192.168.75.128;
+        location / {
+            add_header Access-Control-Allow-Origin *;
+            add_header Access-Control-Allow-Headers X-Requested-With;
+            add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+
+            root /usr/share/nginx/wwwroot/cdn;
+            index index.jsp index.html index.htm;
+        }
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-05-22 01:21:23</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/java/annotation.html" class="prev">
+        注解的继承
+      </a></span> <span class="next"><a href="/backend/java/elasticsearch.html">
+        Elastic Search
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.25085775.js" defer></script><script src="/assets/js/3.0ed2837d.js" defer></script><script src="/assets/js/14.254c943e.js" defer></script><script src="/assets/js/4.1cff9343.js" defer></script>
+  </body>
+</html>
